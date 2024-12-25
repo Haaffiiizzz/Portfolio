@@ -35,40 +35,40 @@ nav ul {
 nav a{
   display: inline-block;
   text-decoration: none;
-  color: green;
+  color: #fff;
   padding: 10px 15px;
-  background-color: #9ff;
+  background-color: #377;
   border-radius: 5px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: inline-block;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 
 }
 
 nav a:hover{
   color: #999;
   transform: scale(1.1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 footer {
   margin-top: 95%;
   position: relative;
+  text-align: center;
 }
 
 #intro {
   position: relative;
   margin: 15% 15%;
   padding: 10% 10%;
-  background-color: #9ff;
   border-radius: 10px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   display: inline-block;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 
 }
 
 #intro:hover {
   transform: scale(1.1);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
 #projects {
