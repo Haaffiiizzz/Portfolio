@@ -2,7 +2,7 @@ function Nav(){
     return (
             <nav>
                 <ul>
-                    <li><a href="#">Introduction</a>   
+                    <li><a href="#intro">Introduction</a>   
                     </li>
 
                     <li>
