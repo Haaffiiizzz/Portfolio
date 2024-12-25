@@ -13,15 +13,20 @@ code {
     monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 nav {
-  margin: 1px;
+  margin: 0;
   background-color: #266;
   padding: 10px;
-  position: relative;
+  position: sticky;
   width: 100%;
-  margin-bottom: 20px;
-
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -29,10 +34,9 @@ nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 
-nav a{
+nav a {
   display: inline-block;
   text-decoration: none;
   color: #fff;
@@ -40,40 +44,73 @@ nav a{
   background-color: #377;
   border-radius: 5px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: inline-block;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-
 }
 
-nav a:hover{
+nav a:hover {
   color: #999;
   transform: scale(1.1);
 }
 
-footer {
-  margin-top: 95%;
-  position: relative;
-  text-align: center;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10vh;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 #intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  margin: 15% 15%;
-  padding: 10% 10%;
+  padding: 20px;
   border-radius: 10px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  display: inline-block;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-
+  height: 65vh;
+  width: 65vw;
+  text-align: center;
+  flex-direction: column;
 }
 
 #intro:hover {
   transform: scale(1.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
 }
 
 #projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  margin: 15% 15%;
-  padding: 10% 10%;
-  
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  height: 65vh;
+  width: 65vw;
+  text-align: center;
+  flex-direction: column;
+  background-color: #fff; /* Optional: Match the background of #intro */
+}
+
+.project {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+footer {
+  text-align: center;
+  background-color: #266;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  margin-top: 20px;
 }

@@ -6,7 +6,7 @@ function Nav(){
                     </li>
 
                     <li>
-                        <a href="#">Projects</a>
+                        <a href="#projects">Projects</a>
                     </li>
                     <li>
                         <a href="#">Reach Out</a>
