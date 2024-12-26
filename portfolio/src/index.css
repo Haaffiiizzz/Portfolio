@@ -70,7 +70,6 @@ main {
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
   height: 65vh;
   width: 65vw;
   text-align: center;
@@ -95,15 +94,17 @@ main {
   width: 65vw;
   text-align: center;
   flex-direction: column;
-  background-color: #fff; /* Optional: Match the background of #intro */
+  background-color: #fff;
 }
 
 .project {
-  padding: 10px;
+  padding: 5%;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #f9f9f9;
+  width: 80%;
+  
 }
 
 footer {

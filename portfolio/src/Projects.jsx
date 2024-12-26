@@ -1,10 +1,10 @@
 
-function Project({projectName, projectDescription}){
+function Project({projectName, projectDescription, imageSrc, altText, projectLink}){
     return (
         <div className="project">
-            <img src="" alt="none" />
+            <img src={imageSrc} alt={altText}/>
             <h2>{projectName}</h2>
-            <a href="#"><p>{projectDescription}</p></a>
+            <a href={projectLink}><p>{projectDescription}</p></a>
         </div>
     )
 }
