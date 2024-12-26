@@ -5,10 +5,12 @@ import Project from "./Projects.jsx"
 import thumbnail4 from "./assets/images/thumbnail_4.png"
 import thumbnail5 from "./assets/images/thumbnail_5.png"
 import thumbnail3 from "./assets/images/thumbnail_3.png"
+import Welcome from "./Welcome.jsx"
 
 function App() {
   return (
     <>
+      <Welcome/>
       <Nav/>
       <main>
         <Intro/>

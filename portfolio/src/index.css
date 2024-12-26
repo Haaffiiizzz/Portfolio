@@ -17,6 +17,10 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: 'DIN Neuzeit Grotesk';
+  src: url('./assets/fonts/DINNeuzeitGroteskStdBdCond.otf') format('opentype');
+}
 
 nav {
   margin: 0;
@@ -60,6 +64,23 @@ main {
   gap: 10vh;
   margin-top: 10%;
   margin-bottom: 10%;
+}
+
+#welcome {
+  background-image: url("assets/images/background.jpg");
+  background-size: cover; 
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  font-size: 5vh;
+  font-family: 'DIN Neuzeit Grotesk';
+  color: #fff;
+  
 }
 
 #intro {
@@ -141,3 +162,4 @@ footer {
   width: 100%;
   margin-top: 20px;
 }
+
