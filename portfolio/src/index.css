@@ -102,7 +102,7 @@ main {
 }
 
 #welcome a:hover {
-  background-color: #488;
+  background-color: rgba(55, 119, 119, 0.7);
   transform: scale(0.9);
 }
 
