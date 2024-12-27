@@ -1,6 +1,11 @@
 function Welcome() {
     return (
-        <div id="welcome">Hello, I am Abdulhafiz. I am a student and fullstack Developer.</div>
+        
+        <div id="welcome"><div className="move">Hello, I am Abdulhafiz.</div>
+            <div>I am an Aspiring Developer.</div>
+            <div><a href="#intro">Learn More About Me</a></div>
+        </div>
+        
     )
 }
 

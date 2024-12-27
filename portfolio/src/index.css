@@ -77,10 +77,49 @@ main {
   text-align: center;
   align-items: center;
   display: flex;
-  font-size: 5vh;
+  flex-direction: column;
+  font-size: 7vh;
   font-family: 'DIN Neuzeit Grotesk';
   color: #fff;
-  
+  padding: 10px 10px 10px 10px;
+  text-shadow: 5px 5px 10px black;
+}
+
+#welcome a {
+  display: inline-block; 
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 5px solid #377;
+  font-size: 5vh;
+  transition: transform 0.5s ease, box-shadow 0.5s ease,  background-color 2s ease;
+}
+
+#welcome a:hover {
+  background-color: #488;
+  transform: scale(0.9);
+}
+
+.move {
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(100vw);
+  }
+  50% {
+    transform: translateX(-12.5%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 #intro {
