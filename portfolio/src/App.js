@@ -1,6 +1,6 @@
 import Nav from "./Navigation.jsx"
 import Footer from "./Footer.jsx"
-import Intro from "./Intro.jsx"
+import About from "./About.jsx"
 import Project from "./Projects.jsx"
 import thumbnail4 from "./assets/images/thumbnail_4.png"
 import thumbnail5 from "./assets/images/thumbnail_5.png"
@@ -13,7 +13,7 @@ function App() {
       <Welcome/>
       <Nav/>
       <main>
-        <Intro/>
+        <About/>
         <div id="projects">
           <Project
             projectName="Tadhkir"
