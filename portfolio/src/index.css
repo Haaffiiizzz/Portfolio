@@ -149,8 +149,6 @@ main {
 
 #about {
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   border-radius: 10px;
   /* transition: transform 0.5s ease, box-shadow 0.5s ease; */
@@ -183,6 +181,8 @@ main {
   font-size: 1.5rem;
   line-height: 1.8;
   border-radius: 10px;
+  margin-right: 50vw;
+  margin-top: 20vh;
   
 }
 
