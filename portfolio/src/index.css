@@ -186,6 +186,11 @@ main {
   
 }
 
+#sectionHeader {
+  position: sticky;
+  font-size: 5vh;
+  top: 150px;
+}
 
 #projects {
   display: flex;

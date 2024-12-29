@@ -8,7 +8,7 @@ function About() {
                 <source src={backgroundVid} type="video/mp4"/>
             </video>
 
-        
+            <div id="sectionHeader">About</div>
             <div id="highlight">
                 I am an Applied Computer Science student at the University of Winnipeg. I love solving problems and 
                 picking my brain. Whether taking on new projects or
