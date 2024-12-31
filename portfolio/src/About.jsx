@@ -4,10 +4,15 @@ import streak from "./assets/images/streak.png"
 function About() {
     return (
         <div id="about">
+            <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
 
-            <video autoPlay loop muted playsInline preload="auto" onLoadedMetadata={(e) => (e.target.playbackRate = 0.4)}>
+            {/* <video autoPlay loop muted playsInline preload="auto" onLoadedMetadata={(e) => (e.target.playbackRate = 0.4)}>
                 <source src={backgroundVid} type="video/mp4"/>
-            </video>
+            </video> */}
 
             <h1 id="sectionHeader">About</h1>
             
