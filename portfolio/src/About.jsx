@@ -1,4 +1,5 @@
 import backgroundVid from "./assets/videos/aboutBack.mp4"
+import streak from "./assets/images/streak.png"
 
 function About() {
     return (
@@ -19,6 +20,9 @@ function About() {
 
             <div id="streak">
                 <h1 id="miniHeading"> GitHub Stats</h1>
+                <object data="https://streak-stats.demolab.com?user=haaffiiizzz&theme=highcontrast&hide_border=False&type=png" type="image/png" style={{width: "100%"}}>
+                    <img src={streak} alt="GitHub Streak"/>
+                </object>   
             </div>
 
             <div id="skills">
