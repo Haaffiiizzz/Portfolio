@@ -7,7 +7,7 @@ function Nav(){
                     </li>
 
                     <li>
-                        <a href="#about">About Me</a>   
+                        <a href="#about">About</a>   
                     </li>
 
                     <li>

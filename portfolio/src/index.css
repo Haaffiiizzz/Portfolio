@@ -49,6 +49,7 @@ html {
 
 nav {
   margin-left: 0;
+  margin-bottom: 0;
   background-color: #266;
   padding: 1vh 1vw;
   position: sticky;
@@ -85,14 +86,6 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10%;
-}
 
 #welcome {
   background-image: url("assets/images/background.jpg");
@@ -176,16 +169,16 @@ main {
 #about {
   display: flex;
   position: relative;
-  /* transition: transform 0.5s ease, box-shadow 0.5s ease; */
   width: 100vw;
   text-align: center;
   flex-direction: column;
   overflow: hidden;
-  padding: 0% 10% 15% 10%;
+  padding: 0% 10%;
   box-sizing: border-box;
-  background: linear-gradient(-45deg, #0b0b0b, #0d332a, #0a1f3f, #0c2d3e);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+  background: linear-gradient(-45deg, #0a1f3f, #0b0b0b,#0d332a, #0c2d3e);
+	background-size: 200% 200%;
+	animation: gradient 10s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+
 }
 
 
@@ -208,11 +201,10 @@ main {
   color: #f5f5f5;
   padding: 20px;
   font-size: 130%;
-  margin-right: 50%;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
   width: 50%;
-  height: 30%;
+  height: 20%;
   margin-right: 50%;
   font-weight: bold;
   
@@ -229,7 +221,7 @@ main {
   font-family: Arial, Helvetica, sans-serif;
   text-align: right;
   width: 50%;
-  height: 30%;
+  height: 20%;
   margin-left: 50%;
   
 }
@@ -267,8 +259,8 @@ main {
   top: -50%;
   left: 0;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
-  -webkit-animation: drop 10s 0s infinite;
-          animation: drop 10s 0s infinite;
+  -webkit-animation: drop 3s 0s infinite;
+          animation: drop 3s 0s infinite;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
@@ -278,21 +270,21 @@ main {
   margin-left: -25%;
 }
 .line:nth-child(1)::after {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.line:nth-child(2)::after {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
+
+/* .line:nth-child(2)::after {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+} */
 
 .line:nth-child(3) {
   margin-left: 25%;
 }
 .line:nth-child(3)::after {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
 @-webkit-keyframes drop {
