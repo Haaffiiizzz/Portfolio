@@ -177,7 +177,7 @@ main {
   text-align: center;
   flex-direction: column;
   overflow: hidden;
-  padding: 0% 5% 5% 5%;
+  padding: 0% 10% 15% 10%;
   box-sizing: border-box;
 }
 
@@ -204,7 +204,7 @@ main {
   margin-right: 50vw;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
-  width: 40%;
+  width: 40vw;
   height: 30%;
   
 }
@@ -213,14 +213,14 @@ main {
   text-align: center;
   font-size: 5vw;
   font-family: Ankh;
-  color: #3fc;
+  color: whitesmoke;
 }
 
 #miniHeading {
   text-align: center;
-  font-size: 3vw;
+  font-size: 2vw;
   font-family: Arial, Helvetica, sans-serif;
-  color: #3fc;
+  color: whitesmoke;
 }
 
 
