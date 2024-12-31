@@ -8,12 +8,17 @@ function About() {
                 <source src={backgroundVid} type="video/mp4"/>
             </video>
 
+            <h1 id="sectionHeader">About</h1>
             
             <div id="highlight">
                 I am an Applied Computer Science student at the University of Winnipeg. I love solving problems and 
                 picking my brain. Whether taking on new projects or
                 solving LeetCode problems, I love to challenge myself. For fun, I love to play Call of Duty and watch
                 crime or mystery shows.
+            </div>
+
+            <div id="streak">
+                <h1 id="miniHeading"> GitHub Stats</h1>
             </div>
 
             <div id="skills">

@@ -170,12 +170,12 @@ main {
 #about {
   display: flex;
   position: relative;
-  border-radius: 10px;
   /* transition: transform 0.5s ease, box-shadow 0.5s ease; */
   width: 100vw;
   text-align: center;
   flex-direction: column;
   overflow: hidden;
+  padding: 0% 5% 5% 5%;
 }
 
 /* #intro:hover {
@@ -197,22 +197,36 @@ main {
   z-index: 1;
   color: white;
   padding: 20px;
-  font-size: 1.5rem;
-  line-height: 1.8;
-  border-radius: 10px;
+  font-size: 130%;
   margin-right: 50vw;
-  margin-top: 20vh;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  width: 40%;
+  height: 30%;
   
 }
 
-/* #sectionHeader {
-  position: sticky;
-  font-size: 5vh;
-  top: 10vh;
+#sectionHeader {
+  text-align: center;
+  font-size: 5vw;
   font-family: Ankh;
   color: #3fc;
-} */
+}
+
+#miniHeading {
+  text-align: center;
+  font-size: 3vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#streak{
+  align-items: right;
+  text-align: center;
+  margin-left: 50vw;
+
+}
+
 
 #projects {
   display: flex;
