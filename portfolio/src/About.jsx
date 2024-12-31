@@ -11,16 +11,17 @@ function About() {
 
             <h1 id="sectionHeader">About</h1>
             
-            <div id="highlight">
+            <div className="aboutSectionLeft">
                 I am an Applied Computer Science student at the University of Winnipeg. I love solving problems and 
                 picking my brain. Whether taking on new projects or
                 solving LeetCode problems, I love to challenge myself. For fun, I love to play Call of Duty and watch
                 crime or mystery shows.
             </div>
 
-            <div id="streak">
+
+            <div className="aboutSectionRight">
                 <h1 id="miniHeading"> GitHub Stats</h1>
-                <object data="https://streak-stats.demolab.com?user=haaffiiizzz&theme=highcontrast&hide_border=False&type=png" type="image/png" style={{width: "100%"}}>
+                <object data="https://streak-stats.demolab.com?user=haaffiiizzz&theme=highcontrast&hide_border=False&type=svg" type="image/png" style={{width: "100%"}}>
                     <img src={streak} alt="GitHub Streak"/>
                 </object>   
             </div>
