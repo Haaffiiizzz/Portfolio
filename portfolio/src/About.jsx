@@ -1,14 +1,23 @@
 import backgroundVid from "./assets/videos/aboutBack.mp4"
 import streak from "./assets/images/streak.png"
 
-const skillIcons = [
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg", alt: "Python" },
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original-wordmark.svg", alt: "FastAPI" },
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg", alt: "PostgreSQL" },
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg", alt: "Git" },
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original-wordmark.svg", alt: "Postman" },
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg", alt: "React" },
+const middleCircleSkills = [
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg"
+
   ];
+  
+const outerCircleSkills = [
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/heroku/heroku-original.svg",
+  ];
+  
   
 
 function About() {
@@ -33,13 +42,64 @@ function About() {
                 crime or mystery shows.
             </div>
 
-            <div id="skills">
+            {/* <div id="skills">
                 {
                     skillIcons.map((icon, index) => (
                         <img key={index} src={icon.src} alt={icon.alt} style={{ "--angle": `${(index / skillIcons.length) * 360}deg` }} className="skillIcon"/>
                 ))}
 
+            </div> */}
+
+            <div id="skillsContainer">
+            
+                <div id="centerIcon">
+                    <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                    alt="Python"
+                    className="centerSkill"
+                    />
+                </div>
+
+                
+                <div id="middleCircle">
+                    {middleCircleSkills.map((icon, index, arr) => (
+                        <img
+                        key={index}
+                        src={icon}
+                        alt={`Middle Skill ${index + 1}`}
+                        className="skillIcon"
+                        style={{
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                            transform: `rotate(${(index / arr.length) * 360}deg) translate(10VW) rotate(-${(index / arr.length) * 360}deg)`,
+                            transformOrigin: "center",
+                        }}
+                        />
+                    ))}
+                    </div>
+
+                <div id="outerCircle">
+                    {outerCircleSkills.map((icon, index, arr) => (
+                        <img
+                        key={index}
+                        src={icon}
+                        alt={`Outer Skill ${index + 1}`}
+                        className="skillIcon"
+                        style={{
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                            transform: `rotate(${(index / arr.length) * 360}deg) translate(17VW) rotate(-${(index / arr.length) * 360}deg)`,
+                            transformOrigin: "center",
+                        }}
+                        />
+                    ))}
+                </div>
             </div>
+
+            
+                
 
             <div className="aboutSectionLeft">
                 <h1 id="miniHeading"> GitHub Stats</h1>
