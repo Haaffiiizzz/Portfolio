@@ -341,12 +341,12 @@ nav a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  /* transform: translate(-50%, -50%); */
+  transform: translate(-17%, -25%);
 }
 
 .centerSkill {
-  width: 16vw;
-  height: 16vh;
+  width: 17vw;
+  height: 17vh;
 }
 
 #middleCircle, #outerCircle {
@@ -357,7 +357,12 @@ nav a:hover {
   left: 0;
 }
 
-.skillIcon {
+.middleIcon {
+  width: 10vw;
+  height: 10vh;
+}
+
+.outerIcon {
   width: 12vw;
   height: 12vh;
 }

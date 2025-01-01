@@ -16,6 +16,8 @@ const outerCircleSkills = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/heroku/heroku-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oauth/oauth-original.svg"
   ];
   
   
@@ -67,7 +69,7 @@ function About() {
                         key={index}
                         src={icon}
                         alt={`Middle Skill ${index + 1}`}
-                        className="skillIcon"
+                        className="middleIcon"
                         style={{
                             position: "absolute",
                             top: "50%",
@@ -85,7 +87,7 @@ function About() {
                         key={index}
                         src={icon}
                         alt={`Outer Skill ${index + 1}`}
-                        className="skillIcon"
+                        className="outerIcon"
                         style={{
                             position: "absolute",
                             top: "50%",
