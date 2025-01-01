@@ -2,14 +2,14 @@ import backgroundVid from "./assets/videos/aboutBack.mp4"
 import streak from "./assets/images/streak.png"
 
 const skillIcons = [
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />,
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original-wordmark.svg" />,
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" />,
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" />,
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original-wordmark.svg" />,
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" />
-               
-  ]
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg", alt: "Python" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original-wordmark.svg", alt: "FastAPI" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg", alt: "PostgreSQL" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg", alt: "Git" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original-wordmark.svg", alt: "Postman" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg", alt: "React" },
+  ];
+  
 
 function About() {
     return (
@@ -33,18 +33,22 @@ function About() {
                 crime or mystery shows.
             </div>
 
+            <div id="skills">
+                {
+                    skillIcons.map((icon, index) => (
+                        <img key={index} src={icon.src} alt={icon.alt} style={{ "--angle": `${(index / skillIcons.length) * 360}deg` }} className="skillIcon"/>
+                ))}
 
-            <div className="aboutSectionRight">
+            </div>
+
+            <div className="aboutSectionLeft">
                 <h1 id="miniHeading"> GitHub Stats</h1>
                 <object data="https://streak-stats.demolab.com?user=haaffiiizzz&theme=highcontrast&hide_border=False&type=svg" type="image/png" style={{width: "100%"}}>
                     <img src={streak} alt="GitHub Streak"/>
                 </object>   
             </div>
 
-            <div id="skills">
-
-
-            </div>
+            
            
         </div>
     )

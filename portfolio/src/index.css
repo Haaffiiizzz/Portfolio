@@ -197,18 +197,15 @@ nav a:hover {
 }
 
 .aboutSectionLeft {
-  z-index: 1;
   color: #f5f5f5;
   padding: 20px;
-  font-size: 130%;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
   width: 50%;
   height: 20%;
   margin-right: 50%;
   font-weight: bold;
-  
-
+  font-size: 130%;
   
 }
 
@@ -318,6 +315,27 @@ nav a:hover {
 }
 
 
+#skills {
+
+  position: relative;
+  width: 50%; 
+  height: 20%;
+  border-radius: 50%; /* Makes the container circular */
+  margin: 20vh 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 65%;
+
+}
+
+.skillIcon {
+  position: absolute;
+  width: 10vw;
+  height: 10vh;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(var(--angle)) translate(12vw) rotate(calc(-1 * var(--angle)));
+}
 
 #projects {
   display: flex;
