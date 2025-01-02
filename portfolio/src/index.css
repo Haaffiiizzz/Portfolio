@@ -360,6 +360,17 @@ nav a:hover {
   }
 }
 
+@keyframes revolveAntiClockWise {
+  0% {
+    transform:rotate(0deg) translate(17vw);
+  }
+  100% {
+    transform: rotate(-360deg) translate(17vw);
+
+
+  }
+}
+
 
 #middleCircle{
   position: absolute;
@@ -374,7 +385,8 @@ nav a:hover {
   position: absolute;
   width: 10vw;
   height: 10vh;
-  animation: revolveClockWise 10s linear infinite ;
+  animation: revolveClockWise 30s linear infinite ;
+  animation-timing-function: linear;
 
 }
 
@@ -387,12 +399,12 @@ nav a:hover {
 }
 
 .outerIcon {
+  position: absolute;
   width: 12vw;
   height: 12vh;
+  animation: revolveAntiClockWise 45s linear infinite;
+  animation-timing-function: linear;
 }
-
-
-
 
 
 

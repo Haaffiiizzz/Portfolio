@@ -71,7 +71,8 @@ function About() {
                         alt={`Middle Skill ${index + 1}`}
                         className="middleIcon"
                         style={{
-                            transform: `rotate(${(index / arr.length) * 360}deg) translate(10vw) rotate(-${(index / arr.length) * 360}deg)`,
+                            transform: `rotate(${(index / arr.length) * 360}deg) translate(10vw)`,
+                            animationDelay: `${(index / arr.length) * 30}s`,
                           }}
                         
                         />
@@ -86,10 +87,8 @@ function About() {
                         alt={`Outer Skill ${index + 1}`}
                         className="outerIcon"
                         style={{
-                            position: "absolute",
-                            top: "50%",
-                            left: "50%",
-                            transform: `rotate(${(index / arr.length) * 360}deg) translate(17VW) rotate(-${(index / arr.length) * 360}deg)`,
+                            transform: `rotate(${(index / arr.length) * 360}deg) translate(10vw)`,
+                            animationDelay: `${(index / arr.length) * 45}s`,
                             
                         }}
                         />
