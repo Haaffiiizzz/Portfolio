@@ -385,7 +385,7 @@ nav a:hover {
   position: absolute;
   width: 10vw;
   height: 10vh;
-  animation: revolveClockWise 30s linear infinite ;
+  animation: revolveClockWise 15s linear infinite ;
   animation-timing-function: linear;
 
 }
@@ -402,10 +402,13 @@ nav a:hover {
   position: absolute;
   width: 12vw;
   height: 12vh;
-  animation: revolveAntiClockWise 45s linear infinite;
+  animation: revolveAntiClockWise 25s linear infinite;
   animation-timing-function: linear;
 }
 
+.middleIcon:hover {
+  animation: pause;
+}
 
 
 #projects {
