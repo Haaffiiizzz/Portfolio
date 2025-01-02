@@ -71,12 +71,9 @@ function About() {
                         alt={`Middle Skill ${index + 1}`}
                         className="middleIcon"
                         style={{
-                            position: "absolute",
-                            top: "50%",
-                            left: "50%",
-                            transform: `rotate(${(index / arr.length) * 360}deg) translate(10VW) rotate(-${(index / arr.length) * 360}deg)`,
-                            transformOrigin: "center",
-                        }}
+                            transform: `rotate(${(index / arr.length) * 360}deg) translate(10vw)`,
+                          }}
+                        
                         />
                     ))}
                     </div>
@@ -93,7 +90,7 @@ function About() {
                             top: "50%",
                             left: "50%",
                             transform: `rotate(${(index / arr.length) * 360}deg) translate(17VW) rotate(-${(index / arr.length) * 360}deg)`,
-                            transformOrigin: "center",
+                            
                         }}
                         />
                     ))}
