@@ -71,7 +71,7 @@ function About() {
                         alt={`Middle Skill ${index + 1}`}
                         className="middleIcon"
                         style={{
-                            transform: `rotate(${(index / arr.length) * 360}deg) translate(10vw)`,
+                            transform: `rotate(${(index / arr.length) * 360}deg) translate(10vw) rotate(-${(index / arr.length) * 360}deg)`,
                           }}
                         
                         />

@@ -351,10 +351,10 @@ nav a:hover {
 
 @keyframes revolveClockWise {
   0% {
-    transform:rotate(0deg);
+    transform:rotate(0deg) translate(10vw);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg) translate(10vw);
 
 
   }
@@ -374,7 +374,7 @@ nav a:hover {
   position: absolute;
   width: 10vw;
   height: 10vh;
-  animation: revolveClockWise 10s linear infinite;
+  animation: revolveClockWise 10s linear infinite ;
 
 }
 
