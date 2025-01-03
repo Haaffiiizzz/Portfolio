@@ -1,5 +1,6 @@
 import backgroundVid from "./assets/videos/aboutBack.mp4"
 import streak from "./assets/images/streak.png"
+import { useEffect } from "react";
 
 const middleCircleSkills = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
@@ -20,29 +21,71 @@ const outerCircleSkills = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oauth/oauth-original.svg"
   ];
 
-const middleIcons  = document.querySelectorAll(".middleIcon");
 
-middleIcons.forEach((middleIcon) => {
-    middleIcon.addEventListener('mouseenter', () => {
-        
-        middleIcons.forEach((icon) => {
-            icon.style.animationPlayState = 'paused';
 
-        });
-    });
 
-    middleIcon.addEventListener('mouseleave', () => {
-
-        middleIcons.forEach((icon) => {
-            icon.style.animationPlayState = "running";
-        });
-
-    });
-
-});
   
 
 function About() {
+
+    useEffect(() => {
+        const middleIcons  = document.querySelectorAll(".middleIcon");
+        middleIcons.forEach((middleIcon) => {
+            middleIcon.addEventListener('mouseenter', () => {
+                
+                middleIcons.forEach((icon) => {
+                    icon.style.animationPlayState = 'paused';
+        
+                });
+            });
+        
+            middleIcon.addEventListener('mouseleave', () => {
+        
+                middleIcons.forEach((icon) => {
+                    icon.style.animationPlayState = "running";
+                });
+        
+            });
+        
+        });
+        return () => {
+            middleIcons.forEach((middleIcon) => {
+              middleIcon.removeEventListener("mouseenter", () => {});
+              middleIcon.removeEventListener("mouseleave", () => {});
+            });
+          };
+    }, []);
+
+    // for outer icons
+    useEffect(() => {
+        const outerIcons  = document.querySelectorAll(".outerIcon");
+        outerIcons.forEach((outerIcon) => {
+            outerIcon.addEventListener('mouseenter', () => {
+                
+                outerIcons.forEach((icon) => {
+                    icon.style.animationPlayState = 'paused';
+        
+                });
+            });
+        
+            outerIcon.addEventListener('mouseleave', () => {
+        
+                outerIcons.forEach((icon) => {
+                    icon.style.animationPlayState = "running";
+                });
+        
+            });
+        
+        });
+        return () => {
+            outerIcons.forEach((outerIcon) => {
+              outerIcon.removeEventListener("mouseenter", () => {});
+              outerIcon.removeEventListener("mouseleave", () => {});
+            });
+          };
+    }, []);
+
+
     return (
         <div id="about">
             <div class="lines">
