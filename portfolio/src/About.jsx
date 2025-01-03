@@ -19,7 +19,27 @@ const outerCircleSkills = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oauth/oauth-original.svg"
   ];
-  
+
+const middleIcons  = document.querySelectorAll(".middleIcon");
+
+middleIcons.forEach((middleIcon) => {
+    middleIcon.addEventListener('mouseenter', () => {
+        
+        middleIcons.forEach((icon) => {
+            icon.style.animationPlayState = 'paused';
+
+        });
+    });
+
+    middleIcon.addEventListener('mouseleave', () => {
+
+        middleIcons.forEach((icon) => {
+            icon.style.animationPlayState = "running";
+        });
+
+    });
+
+});
   
 
 function About() {
@@ -72,7 +92,7 @@ function About() {
                         className="middleIcon"
                         style={{
                             transform: `translate(10vw) rotate(${(index / arr.length) * 360}deg) `,
-                            animationDelay: `${(index / arr.length) * 15}s`,
+                            animationDelay: `${(index / arr.length) * 20}s`,
                           }}
                         
                         />
@@ -88,7 +108,7 @@ function About() {
                         className="outerIcon"
                         style={{
                             transform: `translate(17vw) rotate(${(index / arr.length) * 360}deg)`,
-                            animationDelay: `${(index / arr.length) * 25}s`,
+                            animationDelay: `${(index / arr.length) * 30}s`,
                             
                         }}
                         />
