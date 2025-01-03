@@ -1,4 +1,7 @@
+
+
 function Welcome() {
+    const resumeLink = "https://docs.google.com/document/d/1iT8PucOE4N3lGe7YkbRKnghtVT6V4CFiIz6xUIlcBdc/edit?usp=sharing"
     return (
         
         <div id="welcome">
@@ -6,8 +9,8 @@ function Welcome() {
             <div className="moveRight">An Aspiring Software Engineer.</div>
             <div><a href="#about" className="appear">Learn More About Me</a></div>
             <div id="smallWelcomeLink">
-                <a href="https://docs.google.com/document/d/1iT8PucOE4N3lGe7YkbRKnghtVT6V4CFiIz6xUIlcBdc/edit?usp=sharing" target="_blank">View My Resume</a>
-                <a href="#">Contact Me</a>
+                <a href={resumeLink} target="_blank" className="appearLate">View My Resume</a>
+                <a href="#" className="appearLate">Contact Me</a>
             </div>
 
         </div>

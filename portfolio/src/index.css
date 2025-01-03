@@ -185,6 +185,35 @@ nav a:hover {
   
 }
 
+.appearLate {
+  animation-name: appearLate;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appearLate {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0.002;
+  }
+  90% {
+    opacity: 0.8;
+  }
+
+  96% {
+    opacity: 0.96;
+  }
+
+  100% {
+    opacity: 1;
+  }
+  
+}
+
 .moveLeft {
   animation-name: moveLeft;
   animation-duration: 3s;
