@@ -498,6 +498,26 @@ nav a:hover {
   animation-timing-function: linear;
 }
 
+#skillCard {
+  position: relative;
+  max-width: fit-content;
+  height: 50%;
+  text-align: left;
+  background-color: white;
+  
+  
+}
+
+#skillCard p {
+  background-color: white;
+  
+}
+
+#skillCard h1 {
+  
+  display: inline-block;
+  font-size: 1.5vw;
+}
 
 #projects {
   display: flex;

@@ -1,6 +1,7 @@
 import backgroundVid from "./assets/videos/aboutBack.mp4"
 import streak from "./assets/images/streak.png"
 import { useEffect } from "react";
+import Skill from "./Skill.jsx"
 
 const middleCircleSkills = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
@@ -154,6 +155,8 @@ function About() {
             </div> */}
 
             <div id="skillsContainer">
+
+                <Skill/>
             
                 <div id="centerIcon">
                     <img
@@ -195,9 +198,7 @@ function About() {
                         />
                     ))}
                 </div>
-            </div>
-
-            
+            </div>           
                 
 
             <div className="aboutSectionLeft">
