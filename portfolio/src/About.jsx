@@ -30,6 +30,7 @@ const outerCircleSkills = [
 function About() {
 
     useEffect(() => {
+        const skillCard = document.querySelector("#skillCard")
         const middleIcons  = document.querySelectorAll(".middleIcon");
         middleIcons.forEach((middleIcon) => {
             middleIcon.addEventListener('mouseenter', () => {
@@ -38,6 +39,7 @@ function About() {
                     icon.style.animationPlayState = 'paused';
         
                 });
+                skillCard.style.display = "inline-block";
             });
         
             middleIcon.addEventListener('mouseleave', () => {
@@ -45,6 +47,8 @@ function About() {
                 middleIcons.forEach((icon) => {
                     icon.style.animationPlayState = "running";
                 });
+
+                skillCard.style.display = "none";
         
             });
         
@@ -59,6 +63,7 @@ function About() {
 
     // for outer icons
     useEffect(() => {
+        const skillCard = document.querySelector("#skillCard")
         const outerIcons  = document.querySelectorAll(".outerIcon");
         outerIcons.forEach((outerIcon) => {
             outerIcon.addEventListener('mouseenter', () => {
@@ -67,6 +72,8 @@ function About() {
                     icon.style.animationPlayState = 'paused';
         
                 });
+
+                skillCard.style.display = "inline-block"
             });
         
             outerIcon.addEventListener('mouseleave', () => {
@@ -74,6 +81,7 @@ function About() {
                 outerIcons.forEach((icon) => {
                     icon.style.animationPlayState = "running";
                 });
+                skillCard.style.display = "none"
         
             });
         

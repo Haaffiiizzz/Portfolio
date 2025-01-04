@@ -499,24 +499,28 @@ nav a:hover {
 }
 
 #skillCard {
-  position: relative;
+  position: absolute;
   max-width: fit-content;
   height: 50%;
   text-align: left;
-  background-color: white;
-  
+  background-color: #0d332a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 3%;
+  border: 2px solid #0c2d3e;
+  display: none;
   
 }
 
-#skillCard p {
-  background-color: white;
+#skillCard p { 
   
 }
 
 #skillCard h1 {
   
-  display: inline-block;
+  display: block;
   font-size: 1.5vw;
+
 }
 
 #projects {
