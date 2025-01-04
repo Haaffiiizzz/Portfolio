@@ -86,6 +86,44 @@ function About() {
     }, []);
 
 
+    useEffect (() => {
+        const centerSkill = document.querySelector(".centerSkill")
+        const middleIcons  = document.querySelectorAll(".middleIcon")
+        const outerIcons  = document.querySelectorAll(".outerIcon")
+
+        centerSkill.addEventListener('mouseenter', () => {
+            middleIcons.forEach((icon) => {
+                icon.style.animationPlayState = "paused"
+            }) 
+
+            outerIcons.forEach((icon) => {
+                icon.style.animationPlayState = "paused"
+            }) 
+
+
+        })
+
+        centerSkill.addEventListener('mouseleave', () => {
+            middleIcons.forEach((icon) => {
+                icon.style.animationPlayState = "running"
+            }) 
+
+            outerIcons.forEach((icon) => {
+                icon.style.animationPlayState = "running"
+            }) 
+
+
+        })
+
+        return () => {
+            centerSkill.removeEventListener("mouseenter", () => {})
+            centerSkill.removeEventListener("mouseleave", () => {})
+          };
+    }, []);
+
+
+
+
     return (
         <div id="about">
             <div class="lines">
