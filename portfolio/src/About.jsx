@@ -164,7 +164,7 @@ function About() {
 
             <div id="skillsContainer">
 
-                <Skill/>
+                <Skill/> 
             
                 <div id="centerIcon">
                     <img
