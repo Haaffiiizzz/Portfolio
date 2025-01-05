@@ -1,4 +1,3 @@
-import backgroundVid from "./assets/videos/aboutBack.mp4"
 import streak from "./assets/images/streak.png"
 import React, { useState, useEffect } from "react";
 import Skill from "./Skill.jsx"
@@ -7,7 +6,7 @@ const middleCircleSkills = [
     {
         skill: "FastAPI",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
-        proficiency: "Intermediate"
+        proficiency: "Advanced"
     },
     {
         skill: "PostgreSQL",
@@ -22,12 +21,12 @@ const middleCircleSkills = [
     {
         skill: "Postman",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
-        proficiency: "Intermediate"
+        proficiency: "Advanced"
     },
     {
         skill: "Selenium",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg",
-        proficiency: "Beginner"
+        proficiency: "Advanced"
     },
     {
         skill: "SQLAlchemy",
@@ -45,7 +44,7 @@ const outerCircleSkills = [
     {
         skill: "JavaScript",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-        proficiency: "Advanced"
+        proficiency: "Intermediate"
     },
     {
         skill: "Go",
@@ -69,8 +68,11 @@ const outerCircleSkills = [
     }
 ];
 
-
-
+const mainSkill = [{
+    skill: "Python",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+    proficiency: "Advanced"
+}]
 
   
 
@@ -79,7 +81,6 @@ function About() {
     const [hoveredSkill, setHoveredSkill] = useState(null);
 
     useEffect(() => {
-        const skillCard = document.querySelector("#skillCard")
         const middleIcons  = document.querySelectorAll(".middleIcon");
         middleIcons.forEach((middleIcon) => {
             middleIcon.addEventListener('mouseenter', () => {
@@ -112,7 +113,6 @@ function About() {
 
     // for outer icons
     useEffect(() => {
-        const skillCard = document.querySelector("#skillCard")
         const outerIcons  = document.querySelectorAll(".outerIcon");
         outerIcons.forEach((outerIcon) => {
             outerIcon.addEventListener('mouseenter', () => {
@@ -196,7 +196,7 @@ function About() {
             <div className="aboutSectionLeft">
                 I am an Applied Computer Science student at the University of Winnipeg. I love solving problems and 
                 picking my brain. Whether taking on new projects or
-                solving LeetCode problems, I love to challenge myself. For fun, I love to play Call of Duty and watch
+                solving DSA problems on LeetCode, I love to challenge myself. For fun, I love to play Call of Duty and watch
                 crime or mystery shows.
             </div>
 
@@ -211,11 +211,18 @@ function About() {
                     )}
             
                 <div id="centerIcon">
-                    <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-                    alt="Python"
-                    className="centerSkill"
-                    />
+                    {mainSkill.map((icon, index) => (
+                        <img
+                        key={index}
+                        src={icon.src}
+                        alt={icon.skill}
+                        className="centerSkill"
+                        onMouseEnter={() => setHoveredSkill(icon)}
+                        onMouseLeave={() => setHoveredSkill(null)}
+                        />
+
+                    ))}
+                    
                 </div>
 
                 

@@ -1,6 +1,6 @@
 
 function Skill({skillName, Proficiency}){
-    
+
     return (
         <div id="skillCard">
             <h1>{skillName}</h1>

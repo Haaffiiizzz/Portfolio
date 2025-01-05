@@ -187,7 +187,7 @@ nav a:hover {
 
 .appearLate {
   animation-name: appearLate;
-  animation-duration: 6s;
+  animation-duration: 5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -360,10 +360,6 @@ nav a:hover {
           animation-delay: 2s;
 }
 
-/* .line:nth-child(2)::after {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-} */
 
 .line:nth-child(3) {
   margin-left: 25%;
@@ -403,20 +399,6 @@ nav a:hover {
 	}
 }
 
-
-/* #skills {
-
-  position: relative;
-  width: 50%; 
-  height: 20%;
-  border-radius: 50%;
-  margin: 20vh 20vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 65%;
-
-} */
 
 #skillsContainer {
   position: relative;
@@ -496,6 +478,12 @@ nav a:hover {
   height: 6vw;
   animation: revolveAntiClockWise 30s linear infinite;
   animation-timing-function: linear;
+  transition: 3s;
+}
+
+.outerIcon:hover, .middleIcon:hover {
+  transform: scale(1.1);
+
 }
 
 #skillCard {
@@ -510,14 +498,12 @@ nav a:hover {
   border: 2px solid #0c2d3e;
 }
 
-#skillCard p { 
-  
-}
 
 #skillCard h1 {
   
   display: block;
   font-size: 1.5vw;
+  color: #fff;
 
 }
 
