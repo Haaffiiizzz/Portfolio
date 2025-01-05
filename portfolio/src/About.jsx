@@ -1,6 +1,6 @@
 import backgroundVid from "./assets/videos/aboutBack.mp4"
 import streak from "./assets/images/streak.png"
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Skill from "./Skill.jsx"
 
 const middleCircleSkills = [
@@ -76,6 +76,8 @@ const outerCircleSkills = [
 
 function About() {
 
+    const [hoveredSkill, setHoveredSkill] = useState(null);
+
     useEffect(() => {
         const skillCard = document.querySelector("#skillCard")
         const middleIcons  = document.querySelectorAll(".middleIcon");
@@ -86,7 +88,7 @@ function About() {
                     icon.style.animationPlayState = 'paused';
         
                 });
-                skillCard.style.display = "inline-block";
+                
             });
         
             middleIcon.addEventListener('mouseleave', () => {
@@ -95,7 +97,7 @@ function About() {
                     icon.style.animationPlayState = "running";
                 });
 
-                skillCard.style.display = "none";
+                
         
             });
         
@@ -120,7 +122,7 @@ function About() {
         
                 });
 
-                skillCard.style.display = "inline-block"
+                
             });
         
             outerIcon.addEventListener('mouseleave', () => {
@@ -128,7 +130,7 @@ function About() {
                 outerIcons.forEach((icon) => {
                     icon.style.animationPlayState = "running";
                 });
-                skillCard.style.display = "none"
+                
         
             });
         
@@ -188,9 +190,6 @@ function About() {
                 <div class="line"></div>
             </div>
 
-            {/* <video autoPlay loop muted playsInline preload="auto" onLoadedMetadata={(e) => (e.target.playbackRate = 0.4)}>
-                <source src={backgroundVid} type="video/mp4"/>
-            </video> */}
 
             <h1 id="sectionHeader">About</h1>
             
@@ -201,17 +200,15 @@ function About() {
                 crime or mystery shows.
             </div>
 
-            {/* <div id="skills">
-                {
-                    skillIcons.map((icon, index) => (
-                        <img key={index} src={icon.src} alt={icon.alt} style={{ "--angle": `${(index / skillIcons.length) * 360}deg` }} className="skillIcon"/>
-                ))}
-
-            </div> */}
 
             <div id="skillsContainer">
 
-                <Skill/> 
+                {hoveredSkill && (
+                        <Skill
+                            skillName={hoveredSkill.skill}
+                            Proficiency={hoveredSkill.proficiency}
+                        />
+                    )}
             
                 <div id="centerIcon">
                     <img
@@ -233,7 +230,8 @@ function About() {
                             transform: `translate(10vw) rotate(${(index / arr.length) * 360}deg) `,
                             animationDelay: `${(index / arr.length) * 20}s`,
                           }}
-                        
+                        onMouseEnter={() => setHoveredSkill(icon)}
+                        onMouseLeave={() => setHoveredSkill(null)}
                         />
                     ))}
                     </div>
@@ -250,6 +248,8 @@ function About() {
                             animationDelay: `${(index / arr.length) * 30}s`,
                             
                         }}
+                        onMouseEnter={() => setHoveredSkill(icon)}
+                        onMouseLeave={() => setHoveredSkill(null)}
                         />
                     ))}
                 </div>
