@@ -4,23 +4,70 @@ import { useEffect } from "react";
 import Skill from "./Skill.jsx"
 
 const middleCircleSkills = [
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg"
+    {
+        skill: "FastAPI",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
+        proficiency: "Intermediate"
+    },
+    {
+        skill: "PostgreSQL",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+        proficiency: "Advanced"
+    },
+    {
+        skill: "Git",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+        proficiency: "Advanced"
+    },
+    {
+        skill: "Postman",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+        proficiency: "Intermediate"
+    },
+    {
+        skill: "Selenium",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg",
+        proficiency: "Beginner"
+    },
+    {
+        skill: "SQLAlchemy",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg",
+        proficiency: "Intermediate"
+    }
+];
 
-  ];
-  
 const outerCircleSkills = [
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/heroku/heroku-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oauth/oauth-original.svg"
-  ];
+    {
+        skill: "React",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+        proficiency: "Intermediate"
+    },
+    {
+        skill: "JavaScript",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+        proficiency: "Advanced"
+    },
+    {
+        skill: "Go",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
+        proficiency: "Beginner"
+    },
+    {
+        skill: "Heroku",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/heroku/heroku-original.svg",
+        proficiency: "Intermediate"
+    },
+    {
+        skill: "PyTorch",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg",
+        proficiency: "Beginner"
+    },
+    {
+        skill: "OAuth",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oauth/oauth-original.svg",
+        proficiency: "Intermediate"
+    }
+];
 
 
 
@@ -179,8 +226,8 @@ function About() {
                     {middleCircleSkills.map((icon, index, arr) => (
                         <img
                         key={index}
-                        src={icon}
-                        alt={`Middle Skill ${index + 1}`}
+                        src={icon.src}
+                        alt={icon.skill}
                         className="middleIcon"
                         style={{
                             transform: `translate(10vw) rotate(${(index / arr.length) * 360}deg) `,
@@ -195,8 +242,8 @@ function About() {
                     {outerCircleSkills.map((icon, index, arr) => (
                         <img
                         key={index}
-                        src={icon}
-                        alt={`Outer Skill ${index + 1}`}
+                        src={icon.src}
+                        alt={icon.skill}
                         className="outerIcon"
                         style={{
                             transform: `translate(17vw) rotate(${(index / arr.length) * 360}deg)`,
