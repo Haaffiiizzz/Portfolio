@@ -461,6 +461,8 @@ nav a:hover {
   animation: revolveClockWise 20s linear infinite ;
   animation-timing-function: linear;
   animation-play-state: running;
+  transition: transform 0.3s ease;
+  transform: none;
 
 }
 
@@ -482,7 +484,7 @@ nav a:hover {
   transition: 3s;
 }
 
-.outerIcon:hover, .middleIcon:hover {
+#skillsContainer img:hover {
   transform: scale(1.1);
 
 }

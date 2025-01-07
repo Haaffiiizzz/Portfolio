@@ -74,7 +74,7 @@ const mainSkill = [{
     proficiency: "Advanced"
 }]
 
-  
+// note: fix hopver on imavge instead of div
 
 function About() {
 
@@ -88,6 +88,7 @@ function About() {
                 
                 middleIcons.forEach((icon) => {
                     icon.style.animationPlayState = 'paused';
+                    icon.style.transform = "scale(1.1)";
         
                 });
                 
@@ -97,6 +98,7 @@ function About() {
         
                 middleIcons.forEach((icon) => {
                     icon.style.animationPlayState = "running";
+                    icon.style.transform = "none";
                 });
 
                 
@@ -186,7 +188,7 @@ function About() {
         const handleMouseMove = (event) => {
             const offsetX = event.offsetX; 
             const offsetY = event.offsetY;
-            
+
             setCoordinates([offsetX, offsetY]);
         };
 
