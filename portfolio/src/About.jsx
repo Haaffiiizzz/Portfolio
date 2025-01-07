@@ -186,12 +186,8 @@ function About() {
         const handleMouseMove = (event) => {
             const offsetX = event.offsetX; 
             const offsetY = event.offsetY;
-
-            const width = div.clientWidth;
-            const height = div.clientHeight;
-            const percentX = ((offsetX / width) * 100).toFixed(2);
-            const percentY = ((offsetY / height) * 100).toFixed(2);
-            setCoordinates([percentX, percentY]);
+            
+            setCoordinates([offsetX, offsetY]);
         };
 
             div.addEventListener("mousemove", handleMouseMove);
