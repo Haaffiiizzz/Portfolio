@@ -2,7 +2,7 @@
 function Skill({skillName, Proficiency, coordinates}){
 
     return (
-        <div id="skillCard" style={{top: `${coordinates[1]}%`, left: `${coordinates[0]}%`}}>
+        <div id="skillCard" style={{top: `${coordinates[1]}%`, right: `${coordinates[0]}%`}}>
             <h1>{skillName}</h1>
             <h1>Proficiency:</h1>
             <p>{Proficiency}</p>

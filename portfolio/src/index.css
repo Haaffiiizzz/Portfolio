@@ -407,6 +407,7 @@ nav a:hover {
   margin-left: auto;
   margin-top: 15vh;
   margin-bottom: 15vh;
+  overflow: visible;
 }
 
 #centerIcon {
@@ -489,13 +490,13 @@ nav a:hover {
 #skillCard {
   position: absolute;
   max-width: fit-content;
-  height: 50%;
   text-align: left;
   background-color: #0d332a;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   padding: 3%;
   border: 2px solid #0c2d3e;
+  z-index: 10000;
 }
 
 
