@@ -79,6 +79,7 @@ const mainSkill = [{
 function About() {
 
     const [hoveredSkill, setHoveredSkill] = useState(null);
+    const [coordinates, setCoordinates] = useState([0, 0]);
 
     useEffect(() => {
         const middleIcons  = document.querySelectorAll(".middleIcon");
@@ -179,8 +180,26 @@ function About() {
           };
     }, []);
 
+    useEffect(() => {
+        const div = document.getElementById('skillsContainer');
 
+        const handleMouseMove = (event) => {
+            const offsetX = event.offsetX; 
+            const offsetY = event.offsetY;
 
+            const width = div.clientWidth;
+            const height = div.clientHeight;
+            const percentX = ((offsetX / width) * 100).toFixed(2);
+            const percentY = ((offsetY / height) * 100).toFixed(2);
+            setCoordinates([percentX, percentY]);
+        };
+
+            div.addEventListener("mousemove", handleMouseMove);
+
+        return () => {
+            div.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, []);
 
     return (
         <div id="about">
@@ -207,6 +226,7 @@ function About() {
                         <Skill
                             skillName={hoveredSkill.skill}
                             Proficiency={hoveredSkill.proficiency}
+                            coordinates={coordinates}
                         />
                     )}
             
