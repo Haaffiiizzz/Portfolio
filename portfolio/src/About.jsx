@@ -194,10 +194,10 @@ function About() {
             setCoordinates([offsetX, offsetY]);
         };
 
-            div.addEventListener("mousemove", handleMouseMove);
+            div.addEventListener("mouseenter", handleMouseMove);
 
         return () => {
-            div.removeEventListener("mousemove", handleMouseMove);
+            div.removeEventListener("mouseenter", handleMouseMove);
         };
     }, []);
 
