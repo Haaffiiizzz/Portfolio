@@ -3,6 +3,13 @@ import React, { useState, useEffect } from "react";
 import Skill from "./Skill.jsx"
 
 const middleCircleSkills = [
+
+    {
+        skill: "SQLAlchemy",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg",
+        proficiency: "Intermediate"
+    },
+    
     {
         skill: "FastAPI",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
@@ -27,11 +34,6 @@ const middleCircleSkills = [
         skill: "Selenium",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg",
         proficiency: "Advanced"
-    },
-    {
-        skill: "SQLAlchemy",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg",
-        proficiency: "Intermediate"
     }
 ];
 

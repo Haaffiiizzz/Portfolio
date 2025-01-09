@@ -130,7 +130,7 @@ nav a:hover {
   border-radius: 4px;
   text-decoration: none;
   border: 4px solid rgba(51, 119, 119, 0.555);
-  font-size: 1vw;
+  font-size: 1.5vw;
   transition: transform 0.5s ease, box-shadow 0.5s ease,  background-color 2s ease;
   margin-right: 10px;
   margin-left: 10px;
@@ -405,8 +405,8 @@ nav a:hover {
   width: 50%;
   height: 50%;
   margin-left: auto;
-  margin-top: 15vh;
-  margin-bottom: 15vh;
+  margin-top: 30vh;
+  margin-bottom: 30vh;
   overflow: visible;
 }
 
@@ -499,6 +499,50 @@ nav a:hover {
   padding: 3%;
   border: 2px solid #0c2d3e;
   z-index: 10000;
+  transition: transform 0.3s ease;
+}
+
+.appearSkillCard {
+  animation-name: appearCard;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appearCard {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0.6;
+
+  }
+
+  78% {
+    opacity: 0.67;
+  }
+
+  85% {
+    opacity: 0.7;
+  }
+
+  89% {
+    opacity: 0.79;
+  }
+
+  90% {
+    opacity: 0.85;
+  }
+
+  96% {
+    opacity: 0.96;
+  }
+
+  100% {
+    opacity: 1;
+  }
+  
 }
 
 
