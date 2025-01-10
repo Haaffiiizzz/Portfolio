@@ -187,17 +187,17 @@ function About() {
     useEffect(() => {
         const div = document.getElementById('skillsContainer');
 
-        const handleMouseMove = (event) => {
+        const handleMouseEnter = (event) => {
             const offsetX = event.offsetX; 
             const offsetY = event.offsetY;
 
             setCoordinates([offsetX, offsetY]);
         };
 
-            div.addEventListener("mouseenter", handleMouseMove);
+            div.addEventListener("mouseenter", handleMouseEnter);
 
         return () => {
-            div.removeEventListener("mouseenter", handleMouseMove);
+            div.removeEventListener("mouseenter", handleMouseEnter);
         };
     }, []);
 
