@@ -2,12 +2,12 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://haaffiiizzz.github.io/Portfolio",
+  "homepage": "https://www.abdulhafizdada.com",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
