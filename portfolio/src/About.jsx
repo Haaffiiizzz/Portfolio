@@ -203,12 +203,6 @@ function About() {
 
     return (
         <div id="about">
-            <div class="lines">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-
 
             <h1 id="sectionHeader">About</h1>
             

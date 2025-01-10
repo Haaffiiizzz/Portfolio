@@ -5,7 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #bcc;
+  background: linear-gradient(45deg, #0a1f3f, #0b0b0b,#0d332a, #0c2d3e);
+	background-size: 500% 500%;
+	animation: gradient 5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
 }
 
 * {
@@ -265,9 +267,10 @@ nav a:hover {
   overflow: hidden;
   padding: 0% 10%;
   box-sizing: border-box;
-  background: linear-gradient(-45deg, #0a1f3f, #0b0b0b,#0d332a, #0c2d3e);
+  margin-bottom: 35vh;
+  /* background: linear-gradient(-45deg, #0a1f3f, #0b0b0b,#0d332a, #0c2d3e);
 	background-size: 200% 200%;
-	animation: gradient 10s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+	animation: gradient 10s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; */
 
 }
 
@@ -317,75 +320,7 @@ nav a:hover {
   width: 57%;
 }
 
-.lines {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  margin: auto;
-  width: 90vw;
-}
 
-.line {
-  position: absolute;
-  width: 3px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  background: inherit;
-  overflow: hidden;
-}
-.line::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 15vh;
-  width: 100%;
-  top: -50%;
-  left: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
-  -webkit-animation: drop 3s 0s infinite;
-          animation: drop 3s 0s infinite;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-          animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-}
-.line:nth-child(1) {
-  margin-left: -25%;
-}
-.line:nth-child(1)::after {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-
-.line:nth-child(3) {
-  margin-left: 25%;
-}
-.line:nth-child(3)::after {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
-}
-
-@-webkit-keyframes drop {
-  0% {
-    top: -50%;
-  }
-  100% {
-    top: 110%;
-  }
-}
-
-@keyframes drop {
-  0% {
-    top: -50%;
-  }
-  100% {
-    top: 110%;
-  }
-}
 
 @keyframes gradient {
 	0% {
@@ -562,7 +497,7 @@ nav a:hover {
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  width: 65vw;
+  width: 100%;
   text-align: center;
   flex-direction: column;
   gap: 20px;
@@ -571,22 +506,25 @@ nav a:hover {
   height:auto;
 }
 
-#projects:hover {
-  transform: scale(1.1);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-  padding: 10%;
-
-}
 
 .project {
-  padding: 5%;
+  padding: 7%;
   margin: 10px;
   border: none;
   border-radius: 10px;
-  /* background-color: #f9f9f9; */
-  width: 80%;
+  width: 60%;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  
+  text-align: center;
+}
+
+.project[align="left"] {
+  margin-right: 40%;
+  margin-left: 10%;
+}
+
+.project[align="right"] {
+  margin-left: 40%;
+  margin-right: 10%;
 }
 
 .project:hover {
@@ -616,7 +554,7 @@ footer {
   margin-top: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
 
   #smallWelcomeLink a {
     font-size: large;
