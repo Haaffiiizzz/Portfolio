@@ -14,6 +14,15 @@ function Projects(){
             times based on your location. With a clean and 
             intuitive interface, Tadhkir makes managing your 
             daily prayers simple and seamless." </p>
+                <a href="https://www.github.com/haaffiiizzz/portfolio">Repo</a>
+                <a href="#">Live</a>
+                <div id="projectSkill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"/>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub"/>
+                </div>
                 
             </div>
 
@@ -26,6 +35,15 @@ function Projects(){
             times based on your location. With a clean and 
             intuitive interface, Tadhkir makes managing your 
             daily prayers simple and seamless." </p>
+                <a href="https://www.github.com/haaffiiizzz/portfolio">Repo</a>
+                <a href="#">Live</a>
+                <div id="projectSkill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"/>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub"/>
+                </div>
                 
             </div>
 
@@ -38,6 +56,15 @@ function Projects(){
             times based on your location. With a clean and 
             intuitive interface, Tadhkir makes managing your 
             daily prayers simple and seamless." </p>
+                <a href="https://www.github.com/haaffiiizzz/portfolio">Repo</a>
+                <a href="#">Live</a>
+                <div id="projectSkill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"/>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub"/>
+                </div>
                 
             </div>
 
@@ -50,6 +77,15 @@ function Projects(){
             times based on your location. With a clean and 
             intuitive interface, Tadhkir makes managing your 
             daily prayers simple and seamless." </p>
+                <a href="https://www.github.com/haaffiiizzz/portfolio">Repo</a>
+                <a href="#">Live</a>
+                <div id="projectSkill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"/>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub"/>
+                </div>
                 
             </div>
 
