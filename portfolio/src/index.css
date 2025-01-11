@@ -516,6 +516,7 @@ nav a:hover {
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   text-align: center;
   color: whitesmoke;
+  align-items: center;
 }
 
 .project[align="left"] {
@@ -557,16 +558,16 @@ nav a:hover {
 #projectSkill {
   display: flex;
   flex-direction: row;
-  padding: 10px;
-  margin: 10px;
+  padding: 1vw 1vw;
+  margin: 3vw 3vw;
+  align-items: center;
 
 }
 
 #projectSkill img {
-  height: 30px;
-  width: 30px;
-  margin: 10px;
-  
+  height: 5vh;
+  width: 5vw;
+  margin: auto;
 }
 
 footer {
