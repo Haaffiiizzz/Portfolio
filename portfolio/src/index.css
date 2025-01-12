@@ -296,10 +296,12 @@ nav a:hover {
   text-align: left;
   width: 50%;
   height: 20%;
-  margin-right: 50%;
+  margin-right: 40%;
+  margin-left: 10%;
   font-weight: bold;
   font-size: 130%;
   max-width: 700px;
+  display: inline;
 }
 
 .aboutSectionRight {
@@ -311,7 +313,8 @@ nav a:hover {
   text-align: right;
   width: 50%;
   height: 20%;
-  margin-left: 50%;
+  margin-left: 40%;
+  margin-right: 10%;
   
 }
 
@@ -334,15 +337,27 @@ nav a:hover {
 	}
 }
 
+.introSkill {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%;
+  margin-top: 5vh;
+
+}
+
 
 #skillsContainer {
   position: relative;
-  width: 50%;
-  height: 50%;
+  width: auto;
+  height: auto;
   margin-left: auto;
-  margin-top: 30vh;
-  margin-bottom: 30vh;
+  margin-top: 25%;
+  margin-bottom: 25%;
   overflow: visible;
+  margin-left: 40%;
+  margin-right: 10%;
 }
 
 #centerIcon {
@@ -575,7 +590,7 @@ footer {
   background-color: #266;
   color: #fff;
   padding: 20px;
-  width: 100%;
+  width: 100vw;
   margin-top: 20px;
 }
 

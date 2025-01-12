@@ -206,75 +206,78 @@ function About() {
 
             <h1 id="sectionHeader">About</h1>
             
-            <div className="aboutSectionLeft">
-                I am an Applied Computer Science student at the University of Winnipeg. I love solving problems and 
-                picking my brain. Whether taking on new projects or
-                solving DSA problems on LeetCode, I love to challenge myself. For fun, I love to play Call of Duty and watch
-                crime or mystery shows.
-            </div>
-
-
-            <div id="skillsContainer">
-
-                {hoveredSkill && (
-                        <Skill
-                            skillName={hoveredSkill.skill}
-                            Proficiency={hoveredSkill.proficiency}
-                            coordinates={coordinates}
-                        />
-                    )}
-            
-                <div id="centerIcon">
-                    {mainSkill.map((icon, index) => (
-                        <img
-                        key={index}
-                        src={icon.src}
-                        alt={icon.skill}
-                        className="centerSkill"
-                        onMouseEnter={() => setHoveredSkill(icon)}
-                        onMouseLeave={() => setHoveredSkill(null)}
-                        />
-
-                    ))}
-                    
+            <div className=".introSkill">
+                <div className="aboutSectionLeft">
+                    I am an Applied Computer Science student at the University of Winnipeg. I love solving problems and 
+                    picking my brain. Whether taking on new projects or
+                    solving DSA problems on LeetCode, I love to challenge myself. For fun, I love to play Call of Duty and watch
+                    crime or mystery shows.
                 </div>
 
+
+                <div id="skillsContainer">
+
+                    {hoveredSkill && (
+                            <Skill
+                                skillName={hoveredSkill.skill}
+                                Proficiency={hoveredSkill.proficiency}
+                                coordinates={coordinates}
+                            />
+                        )}
                 
-                <div id="middleCircle">
-                    {middleCircleSkills.map((icon, index, arr) => (
-                        <img
-                        key={index}
-                        src={icon.src}
-                        alt={icon.skill}
-                        className="middleIcon"
-                        style={{
-                            transform: `translate(10vw) rotate(${(index / arr.length) * 360}deg) `,
-                            animationDelay: `${(index / arr.length) * 20}s`,
-                          }}
-                        onMouseEnter={() => setHoveredSkill(icon)}
-                        onMouseLeave={() => setHoveredSkill(null)}
-                        />
-                    ))}
+                    <div id="centerIcon">
+                        {mainSkill.map((icon, index) => (
+                            <img
+                            key={index}
+                            src={icon.src}
+                            alt={icon.skill}
+                            className="centerSkill"
+                            onMouseEnter={() => setHoveredSkill(icon)}
+                            onMouseLeave={() => setHoveredSkill(null)}
+                            />
+
+                        ))}
+                        
                     </div>
 
-                <div id="outerCircle">
-                    {outerCircleSkills.map((icon, index, arr) => (
-                        <img
-                        key={index}
-                        src={icon.src}
-                        alt={icon.skill}
-                        className="outerIcon"
-                        style={{
-                            transform: `translate(17vw) rotate(${(index / arr.length) * 360}deg)`,
-                            animationDelay: `${(index / arr.length) * 30}s`,
-                            
-                        }}
-                        onMouseEnter={() => setHoveredSkill(icon)}
-                        onMouseLeave={() => setHoveredSkill(null)}
-                        />
-                    ))}
-                </div>
-            </div>           
+                    
+                    <div id="middleCircle">
+                        {middleCircleSkills.map((icon, index, arr) => (
+                            <img
+                            key={index}
+                            src={icon.src}
+                            alt={icon.skill}
+                            className="middleIcon"
+                            style={{
+                                transform: `translate(10vw) rotate(${(index / arr.length) * 360}deg) `,
+                                animationDelay: `${(index / arr.length) * 20}s`,
+                            }}
+                            onMouseEnter={() => setHoveredSkill(icon)}
+                            onMouseLeave={() => setHoveredSkill(null)}
+                            />
+                        ))}
+                        </div>
+
+                    <div id="outerCircle">
+                        {outerCircleSkills.map((icon, index, arr) => (
+                            <img
+                            key={index}
+                            src={icon.src}
+                            alt={icon.skill}
+                            className="outerIcon"
+                            style={{
+                                transform: `translate(17vw) rotate(${(index / arr.length) * 360}deg)`,
+                                animationDelay: `${(index / arr.length) * 30}s`,
+                                
+                            }}
+                            onMouseEnter={() => setHoveredSkill(icon)}
+                            onMouseLeave={() => setHoveredSkill(null)}
+                            />
+                        ))}
+                    </div>
+                    
+                </div>  
+            </div>         
                 
 
             <div className="aboutSectionLeft">
