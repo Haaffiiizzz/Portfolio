@@ -5,6 +5,7 @@ function Welcome() {
     return (
         
         <div id="welcome">
+            <div className="moveLeft">(Website Still Under Construction!)</div>
             <div className="moveLeft">Hello, I am Abdulhafiz.</div>
             <div className="moveRight">An Aspiring Software Engineer.</div>
             <div><a href="#about" className="appear">Learn More About Me</a></div>
