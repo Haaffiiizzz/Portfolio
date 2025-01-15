@@ -204,17 +204,17 @@ function About() {
     return (
         <div id="about">
 
-            <h1 id="sectionHeader">About</h1>
+            {/* <h1 id="sectionHeader">About</h1> */}
             
-            <div className=".introSkill">
-                <div className="aboutSectionLeft">
+            
+                <div className="aboutSection">
                     I am an Applied Computer Science student at the University of Winnipeg. I love solving problems and 
                     picking my brain. Whether taking on new projects or
                     solving DSA problems on LeetCode, I love to challenge myself. For fun, I love to play Call of Duty and watch
                     crime or mystery shows.
                 </div>
 
-
+                
                 <div id="skillsContainer">
 
                     {hoveredSkill && (
@@ -276,16 +276,17 @@ function About() {
                         ))}
                     </div>
                     
-                </div>  
-            </div>         
+                </div>   
+                
+                     
                 
 
-            <div className="aboutSectionLeft">
+            {/* <div className="aboutSectionLeft">
                 <h1 id="miniHeading"> GitHub Stats</h1>
                 <object data="https://streak-stats.demolab.com?user=haaffiiizzz&theme=highcontrast&hide_border=False&type=svg" type="image/png" style={{width: "100%"}}>
                     <img src={streak} alt="GitHub Streak"/>
                 </object>   
-            </div>
+            </div> */}
 
             
            
