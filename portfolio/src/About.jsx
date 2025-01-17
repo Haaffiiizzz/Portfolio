@@ -83,71 +83,6 @@ function About() {
     const [hoveredSkill, setHoveredSkill] = useState(null);
     const [coordinates, setCoordinates] = useState([0, 0]);
 
-    useEffect(() => {
-        const middleIcons  = document.querySelectorAll(".middleIcon");
-        middleIcons.forEach((middleIcon) => {
-            middleIcon.addEventListener('mouseenter', () => {
-                
-                middleIcons.forEach((icon) => {
-                    icon.style.animationPlayState = 'paused';
-                    icon.style.transform = "scale(1.1)";
-        
-                });
-                
-            });
-        
-            middleIcon.addEventListener('mouseleave', () => {
-        
-                middleIcons.forEach((icon) => {
-                    icon.style.animationPlayState = "running";
-                    icon.style.transform = "none";
-                });
-
-                
-        
-            });
-        
-        });
-        return () => {
-            middleIcons.forEach((middleIcon) => {
-              middleIcon.removeEventListener("mouseenter", () => {});
-              middleIcon.removeEventListener("mouseleave", () => {});
-            });
-          };
-    }, []);
-
-    // for outer icons
-    useEffect(() => {
-        const outerIcons  = document.querySelectorAll(".outerIcon");
-        outerIcons.forEach((outerIcon) => {
-            outerIcon.addEventListener('mouseenter', () => {
-                
-                outerIcons.forEach((icon) => {
-                    icon.style.animationPlayState = 'paused';
-        
-                });
-
-                
-            });
-        
-            outerIcon.addEventListener('mouseleave', () => {
-        
-                outerIcons.forEach((icon) => {
-                    icon.style.animationPlayState = "running";
-                });
-                
-        
-            });
-        
-        });
-        return () => {
-            outerIcons.forEach((outerIcon) => {
-              outerIcon.removeEventListener("mouseenter", () => {});
-              outerIcon.removeEventListener("mouseleave", () => {});
-            });
-          };
-    }, []);
-
 
     useEffect (() => {
         const centerSkill = document.querySelector(".centerSkill")
@@ -242,38 +177,59 @@ function About() {
 
                     
                     <div id="middleCircle">
-                        {middleCircleSkills.map((icon, index, arr) => (
-                            <img
-                            key={index}
-                            src={icon.src}
-                            alt={icon.skill}
-                            className="middleIcon"
-                            style={{
-                                transform: `translate(10vw) rotate(${(index / arr.length) * 360}deg) `,
-                                animationDelay: `${(index / arr.length) * 20}s`,
-                            }}
-                            onMouseEnter={() => setHoveredSkill(icon)}
-                            onMouseLeave={() => setHoveredSkill(null)}
-                            />
-                        ))}
+                            {middleCircleSkills.map((icon, index, arr) => {
+
+                                const angle = (index / arr.length) * 360;
+                                const isSmallScreen = window.innerWidth <= 730;
+
+                                const transformStyle = isSmallScreen
+                                    ? `translate(${15 * Math.cos((angle * Math.PI) / 180)}vw, ${15 * Math.sin((angle * Math.PI) / 180)}vw)`
+                                    : `translate(10vw) rotate(${angle}deg)`;
+
+                                return (
+                                    <img
+                                        key={index}
+                                        src={icon.src}
+                                        alt={icon.skill}
+                                        className="middleIcon"
+                                        style={{
+                                            transform: transformStyle,
+                                            animation: isSmallScreen ? "none" : `revolveClockWise 20s linear infinite`,
+                                            animationDelay: isSmallScreen ? "0s" :`${(index / arr.length) * 20}s`,
+                                        }}
+                                        onMouseEnter={() => setHoveredSkill(icon)}
+                                        onMouseLeave={() => setHoveredSkill(null)}
+                                    />
+                                );
+                            })}
                         </div>
 
                     <div id="outerCircle">
-                        {outerCircleSkills.map((icon, index, arr) => (
-                            <img
-                            key={index}
-                            src={icon.src}
-                            alt={icon.skill}
-                            className="outerIcon"
-                            style={{
-                                transform: `translate(17vw) rotate(${(index / arr.length) * 360}deg)`,
-                                animationDelay: `${(index / arr.length) * 30}s`,
-                                
-                            }}
-                            onMouseEnter={() => setHoveredSkill(icon)}
-                            onMouseLeave={() => setHoveredSkill(null)}
-                            />
-                        ))}
+                        {outerCircleSkills.map((icon, index, arr) => {
+                            const angle = (index / arr.length) * 360;
+                            const isSmallScreen = window.innerWidth <= 730;
+
+                            const transformStyle = isSmallScreen
+                                ? `translate(${30 * Math.cos((angle * Math.PI) / 180)}vw, ${30 * Math.sin((angle * Math.PI) / 180)}vw)`
+                                : `translate(17vw) rotate(${angle}deg)`;
+                        
+                            return (
+                                <img
+                                key={index}
+                                src={icon.src}
+                                alt={icon.skill}
+                                className="outerIcon"
+                                style={{
+                                    transform: transformStyle,
+                                    animation: isSmallScreen ? "none" : `revolveAntiClockWise 30s linear infinite`,
+                                    animationDelay: isSmallScreen ? "0s" :`${(index / arr.length) * 30}s`,
+                                    
+                                }}
+                                onMouseEnter={() => setHoveredSkill(icon)}
+                                onMouseLeave={() => setHoveredSkill(null)}
+                                />
+                            );
+                        })}
                     </div>
                     
                 </div>   
