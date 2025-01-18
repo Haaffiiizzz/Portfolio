@@ -6,8 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(45deg, #0a1f3f, #0b0b0b,#0d332a, #0c2d3e);
-	background-size: 500% 500%;
+  background: linear-gradient(45deg, #07182e, #090909, #0a281f, #09222d);
+	background-size: 400% 400%;
 	animation: gradient 5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
 }
 
