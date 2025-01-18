@@ -1,6 +1,7 @@
-import streak from "./assets/images/streak.png"
 import React, { useState, useEffect } from "react";
 import Skill from "./Skill.jsx"
+import hero from "./assets/images/avatar.svg"
+
 
 const middleCircleSkills = [
 
@@ -143,6 +144,7 @@ function About() {
             
             
                 <div className="aboutSection">
+                    <img src={hero} alt="hero" />
                     I am an Applied Computer Science student at the University of Winnipeg. I love solving problems and 
                     picking my brain. Whether taking on new projects or
                     solving DSA problems on LeetCode, I love to challenge myself. For fun, I love to play Call of Duty and watch
