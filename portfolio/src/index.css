@@ -273,10 +273,6 @@ nav a:hover {
   box-sizing: border-box;
   margin-bottom: 35vh;
   height: 120vh;
-  /* background: linear-gradient(-45deg, #0a1f3f, #0b0b0b,#0d332a, #0c2d3e);
-	background-size: 200% 200%;
-	animation: gradient 10s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; */
-
 }
 
 
@@ -297,9 +293,8 @@ nav a:hover {
 .aboutSection {
   color: #f5f5f5;
   padding: 20px;
-  font-family: "Playfair Display", "Montserrat", sans-serif;
-  font-style: italic;
-  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   font-size: 83%;
   line-height: 1.5;
   text-align: left;
@@ -321,19 +316,6 @@ nav a:hover {
   margin-bottom: 7%;
 
 }
-
-/* .aboutSectionRight {
-  z-index: 1;
-  color: #f5f5f5;
-  padding: 20px;
-  font-size: 130%;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: right;
-  width: 50%;
-  height: 20%;
-  margin-right: 10%;
-  
-} */
 
 
 @keyframes gradient {
