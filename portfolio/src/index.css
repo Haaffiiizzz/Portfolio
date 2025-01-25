@@ -411,7 +411,6 @@ nav a:hover {
 
 }
 
-
 #outerCircle {
   position: absolute;
   width: 100%; 
@@ -432,15 +431,26 @@ nav a:hover {
 
 #skillCard {
   position: absolute;
-  max-width: fit-content;
-  text-align: left;
-  background-color: #0d332a;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  padding: 3%;
-  border: 2px solid #0c2d3e;
+  text-align: center;
+  background: linear-gradient(145deg, #0d332a, #13433a);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 5%;
+  width: 12vw;
+  border: 2px solid rgba(255, 255, 255, 0.1);
   z-index: 10000;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 70%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #d1f5e0;
+}
+
+#skillCard:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(145deg, #13433a, #1a5d4b);
+  border: 2px solid #1e6e57;
 }
 
 .appearSkillCard {
@@ -454,46 +464,29 @@ nav a:hover {
   0% {
     opacity: 0;
   }
-
   70% {
     opacity: 0.6;
-
   }
-
   78% {
     opacity: 0.67;
   }
-
   85% {
     opacity: 0.7;
   }
-
   89% {
     opacity: 0.79;
   }
-
   90% {
     opacity: 0.85;
   }
-
   96% {
     opacity: 0.96;
   }
-
   100% {
     opacity: 1;
   }
-  
 }
 
-
-#skillCard h1 {
-  
-  display: block;
-  font-size: 1.5vw;
-  color: #fff;
-
-}
 
 #projects {
   display: flex;

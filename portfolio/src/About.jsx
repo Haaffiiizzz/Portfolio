@@ -4,37 +4,41 @@ import hero from "./assets/images/avatar.svg"
 
 
 const middleCircleSkills = [
-
     {
         skill: "SQLAlchemy",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg",
-        proficiency: "Intermediate"
+        proficiency: "Intermediate",
+        note: "SQLAlchemy has been my go-to ORM tool for building robust, scalable databases. I’ve used it extensively in projects like DealWatch, where I managed complex queries and ensured seamless integration with FastAPI."
     },
-    
     {
         skill: "FastAPI",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
-        proficiency: "Advanced"
+        proficiency: "Advanced",
+        note: "FastAPI has been an essential part of my development toolkit, especially for creating high-performance APIs like in Muktashif and DealWatch. Its speed and simplicity make it my favorite for backend development."
     },
     {
         skill: "PostgreSQL",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-        proficiency: "Advanced"
+        proficiency: "Advanced",
+        note: "PostgreSQL is my trusted database choice for handling structured data. I’ve optimized queries and managed data efficiently for multiple projects, ensuring reliability and performance."
     },
     {
         skill: "Git",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
-        proficiency: "Advanced"
+        proficiency: "Advanced",
+        note: "Version control with Git has been crucial for my collaboration and solo projects. It keeps my work organized and ensures I can track every change while working on complex systems."
     },
     {
         skill: "Postman",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
-        proficiency: "Advanced"
+        proficiency: "Advanced",
+        note: "Postman has been indispensable for testing APIs. I rely on it to validate endpoints and debug issues, ensuring my projects are reliable and user-friendly."
     },
     {
         skill: "Selenium",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg",
-        proficiency: "Advanced"
+        proficiency: "Advanced",
+        note: "Selenium’s automation capabilities have helped me scrape data efficiently, like in DealWatch, where I used it to monitor shopping sites for real-time price changes."
     }
 ];
 
@@ -42,44 +46,108 @@ const outerCircleSkills = [
     {
         skill: "React",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-        proficiency: "Intermediate"
+        proficiency: "Intermediate",
+        note: "I enjoy using React for building intuitive, dynamic frontends. I’ve applied it in projects like this Portfolio website to create interactive user experiences that seamlessly connect with backends."
     },
     {
         skill: "JavaScript",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-        proficiency: "Intermediate"
+        proficiency: "Intermediate",
+        note: "JavaScript brings my web applications to life. Whether it's scripting for React or standalone features, it’s been vital for creating responsive, user-centric designs."
     },
     {
         skill: "Go",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
-        proficiency: "Beginner"
+        proficiency: "Beginner",
+        note: "Go is a language I’ve been exploring for its efficiency in building fast and scalable applications. It’s a new frontier I’m excited to master further."
     },
     {
         skill: "Heroku",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/heroku/heroku-original.svg",
-        proficiency: "Intermediate"
+        proficiency: "Intermediate",
+        note: "Deploying projects to Heroku has streamlined my workflow. It’s my go-to for hosting web applications, ensuring accessibility and smooth performance."
     },
     {
         skill: "PyTorch",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg",
-        proficiency: "Beginner"
+        proficiency: "Beginner",
+        note: "I’m currently using PyTorch to implement deep learning models in projects like Muktashif, where I'm training neural networks for complex audio-to-text processing tasks."
     },
     {
         skill: "OAuth",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oauth/oauth-original.svg",
-        proficiency: "Intermediate"
+        proficiency: "Intermediate",
+        note: "OAuth has been a key part of ensuring secure user authentication in my projects, enabling seamless integration with external services while protecting sensitive data."
     }
 ];
 
-const mainSkill = [{
-    skill: "Python",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-    proficiency: "Advanced"
-}]
+const mainSkill = [
+    {
+        skill: "Python",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        proficiency: "Advanced",
+        note: "Python is the backbone of my development journey. From solving complex problems on LeetCode to building full-stack applications, it’s my most versatile and proficient skill."
+    }
+];
+
 
 // note: fix hopver on imavge instead of div
 
 function About() {
+
+    useEffect(() => {
+        const middleIcons = document.querySelectorAll(".middleIcon");
+        const outerIcons = document.querySelectorAll(".outerIcon");
+    
+        const pauseAnimation = (icons) => {
+            icons.forEach((icon) => {
+                icon.style.animationPlayState = "paused";
+            });
+        };
+    
+        const resumeAnimation = (icons) => {
+            icons.forEach((icon) => {
+                icon.style.animationPlayState = "running";
+            });
+        };
+    
+        
+        middleIcons.forEach((icon) => {
+            icon.addEventListener("mouseenter", () => {
+                pauseAnimation(middleIcons);
+                
+            });
+    
+            icon.addEventListener("mouseleave", () => {
+                resumeAnimation(middleIcons);
+                
+            });
+        });
+    
+        
+        outerIcons.forEach((icon) => {
+            icon.addEventListener("mouseenter", () => {
+                pauseAnimation(outerIcons);
+            });
+    
+            icon.addEventListener("mouseleave", () => {
+                resumeAnimation(outerIcons);
+            });
+        });
+    
+        return () => {
+            
+            middleIcons.forEach((icon) => {
+                icon.removeEventListener("mouseenter", () => {});
+                icon.removeEventListener("mouseleave", () => {});
+            });
+    
+            outerIcons.forEach((icon) => {
+                icon.removeEventListener("mouseenter", () => {});
+                icon.removeEventListener("mouseleave", () => {});
+            });
+        };
+    }, []);
 
     const [hoveredSkill, setHoveredSkill] = useState(null);
     const [coordinates, setCoordinates] = useState([0, 0]);
@@ -185,7 +253,7 @@ function About() {
                     {hoveredSkill && (
                             <Skill
                                 skillName={hoveredSkill.skill}
-                                Proficiency={hoveredSkill.proficiency}
+                                note={hoveredSkill.note}
                                 coordinates={coordinates}
                             />
                         )}
@@ -263,18 +331,7 @@ function About() {
                     </div>
                     
                 </div>   
-                
                      
-                
-
-            {/* <div className="aboutSectionLeft">
-                <h1 id="miniHeading"> GitHub Stats</h1>
-                <object data="https://streak-stats.demolab.com?user=haaffiiizzz&theme=highcontrast&hide_border=False&type=svg" type="image/png" style={{width: "100%"}}>
-                    <img src={streak} alt="GitHub Streak"/>
-                </object>   
-            </div> */}
-
-            
            
         </div>
     )
