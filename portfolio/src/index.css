@@ -607,7 +607,7 @@ footer {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      height: 120vh;
+      height: 190vh;
       scroll-margin-top: 10vh;
   }
 
@@ -657,10 +657,9 @@ footer {
     
   }
 
-  #skillCard h1, p {
-    font-size: 3vw;
+  #skillCard {
+    width: 50%;
   }
-
 
   #projects {
       width: 100%;
