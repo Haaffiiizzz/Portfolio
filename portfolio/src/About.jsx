@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Skill from "./Skill.jsx"
 import hero from "./assets/images/avatar.svg"
 
@@ -84,7 +84,7 @@ function About() {
     const [hoveredSkill, setHoveredSkill] = useState(null);
     const [coordinates, setCoordinates] = useState([0, 0]);
 
-
+    // code below to set skill icons to move or pause when hovered
     useEffect (() => {
         const centerSkill = document.querySelector(".centerSkill")
         const middleIcons  = document.querySelectorAll(".middleIcon")
@@ -120,6 +120,8 @@ function About() {
           };
     }, []);
 
+    // code below to set skill card location when skill is hovered
+
     useEffect(() => {
         const div = document.getElementById('skillsContainer');
 
@@ -137,13 +139,39 @@ function About() {
         };
     }, []);
 
+    //  code below to let about info only move when in view
+    const aboutRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("moveRight"); 
+            }
+            });
+        },
+        { threshold: 0.5 }
+        );
+
+        if (aboutRef.current) {
+        observer.observe(aboutRef.current);
+        }
+
+        return () => {
+        if (aboutRef.current) {
+            observer.unobserve(aboutRef.current);
+        }
+        };
+    }, []);
+
     return (
         <div id="about">
 
             {/* <h1 id="sectionHeader">About</h1> */}
             
             
-                <div className="aboutSection">
+                <div className="aboutSection" ref={aboutRef}>
                     <img src={hero} alt="hero" />
                     I am an Applied Computer Science student at the University of Winnipeg. I love solving problems and 
                     picking my brain. Whether taking on new projects or

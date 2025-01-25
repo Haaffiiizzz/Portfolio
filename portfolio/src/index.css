@@ -230,6 +230,7 @@ nav a:hover {
 @keyframes moveLeft {
   0% {
     transform: translateX(20vw);
+    opacity: 0;
   }
   50% {
     transform: translateX(-12.5%);
@@ -237,6 +238,7 @@ nav a:hover {
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -250,6 +252,7 @@ nav a:hover {
 @keyframes moveRight {
   0% {
     transform: translateX(-20vw);
+    opacity: 0;
   }
   
   50% {
@@ -258,7 +261,9 @@ nav a:hover {
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
+  
 }
 
 
@@ -304,10 +309,12 @@ nav a:hover {
   margin-top: 10%;
   max-width: 800px;
   display: inline;
-  animation-name: moveRight;
+  /* animation-name: moveRight; */
   animation-duration: 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  transition: transform 3s, opacity 3s;
+  opacity: 0;
 }
 
 .aboutSection img{
