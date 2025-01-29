@@ -240,12 +240,12 @@ function About() {
             {/* <h1 id="sectionHeader">About</h1> */}
             
             
-                <div className="aboutSection" ref={aboutRef}>
+                <div id="aboutSection" ref={aboutRef}>
                     <img src={hero} alt="hero" />
-                    I am an Applied Computer Science student at the University of Winnipeg. I love solving problems and 
+                    <p>I am an Applied Computer Science student at the University of Winnipeg. I love solving problems and 
                     picking my brain. Whether taking on new projects or
                     solving DSA problems on LeetCode, I love to challenge myself. For fun, I love to play Call of Duty and watch
-                    crime or mystery shows.
+                    crime or mystery shows.</p>
                 </div>
 
                 
