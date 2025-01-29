@@ -312,6 +312,7 @@ nav a:hover {
   transition: transform 3s, opacity 3s;
   opacity: 0;
   align-content: center;
+  margin-bottom: 0;
 }
 
 #aboutSection img {
@@ -604,9 +605,12 @@ footer {
       padding: 5%;
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      height: 190vh;
+      gap: 30px;
+      height: 130vh;
       scroll-margin-top: 10vh;
+      margin-bottom: 0;
+      align-items: center;
+      justify-items: center;
   }
 
   #aboutSection {
