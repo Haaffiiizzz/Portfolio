@@ -91,8 +91,6 @@ const mainSkill = [
 ];
 
 
-// note: fix hopver on imavge instead of div
-
 function About() {
 
     useEffect(() => {
@@ -209,27 +207,30 @@ function About() {
 
     //  code below to let about info only move when in view
     const aboutRef = useRef(null);
+    const skillsRef = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("moveRight"); 
-            }
-            });
-        },
-        { threshold: 0.5 }
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        if (entry.target === aboutRef.current) {
+                            entry.target.classList.add("moveRight");
+                        } else if (entry.target === skillsRef.current) {
+                            entry.target.classList.add("moveLeft");
+                        }
+                    }
+                });
+            },
+            { threshold: 0.5 }
         );
 
-        if (aboutRef.current) {
-        observer.observe(aboutRef.current);
-        }
+        if (aboutRef.current) observer.observe(aboutRef.current);
+        if (skillsRef.current) observer.observe(skillsRef.current);
 
         return () => {
-        if (aboutRef.current) {
-            observer.unobserve(aboutRef.current);
-        }
+            if (aboutRef.current) observer.unobserve(aboutRef.current);
+            if (skillsRef.current) observer.unobserve(skillsRef.current);
         };
     }, []);
 
@@ -248,7 +249,7 @@ function About() {
                 </div>
 
                 
-                <div id="skillsContainer">
+                <div id="skillsContainer" ref={skillsRef}>
 
                     {hoveredSkill && (
                             <Skill

@@ -233,7 +233,7 @@ nav a:hover {
     opacity: 0;
   }
   50% {
-    transform: translateX(-12.5%);
+    transform: translateX(-13%);
     opacity: 1;
   }
   100% {
@@ -347,10 +347,11 @@ nav a:hover {
   overflow: visible;
   margin-top: 30%;
   margin-right: 20%;
-  animation-name: appear;
-  animation-duration: 10s;
+  animation-duration: 5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  transition: transform 3s, opacity 3s;
+  opacity: 0;
   
 }
 
@@ -681,4 +682,3 @@ footer {
   }
 
 }
-/* <a href="https://www.flaticon.com/free-icons/silhouette" title="silhouette icons">Silhouette icons created by Iconjam - Flaticon</a> */
