@@ -280,8 +280,10 @@ nav a:hover {
 #sectionHeader {
   text-align: center;
   font-size: 5vw;
-  font-family: Ankh;
-  color: whitesmoke;
+  max-height: 50px;
+  font-family: "Titillium Web", serif;
+  color: #999;
+  font-weight: 550;
 }
 
 #miniHeading {
@@ -308,7 +310,7 @@ nav a:hover {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   transition: transform 3s, opacity 3s;
-  opacity: 0;
+  opacity: 0.001;
   align-content: center;
   margin-bottom: 0;
 }
@@ -493,6 +495,7 @@ nav a:hover {
   margin: 0px auto;
   border: none;
   height:auto;
+  scroll-margin-top: 20vh;
 }
 
 .project {
@@ -595,7 +598,7 @@ footer {
 
   #about {
       flex-direction: column;
-      height: 130vh;
+      height: 120vh;
       scroll-margin-top: 10vh;
       margin-bottom: 0;
       align-items: center;
@@ -606,26 +609,29 @@ footer {
     position: relative;
     width: 100%; 
     margin-top: 0;
-    margin-bottom: 15vh;
+    margin-bottom: 25vh;
     margin-right: 0;
     margin-left: 0;
     height: auto;
     font-weight: 500;
     font-size: 80%;
     line-height: 1.2;
-    left: 15%;
+    left: 0;
   }
 
-  #aboutSection img{
-    height: 50%;
-    width: 100%;
-    margin-bottom: 5%;
-    align-self: center;
-  }
+  #aboutSection img {
+    width: 80%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto 5%;
+}
 
   #aboutSection p {
-    width: 50%;
+    width: 80%;
     min-width: 250px;
+    max-width: 350px;
+    display: block;
+    margin: 0 auto;
   }
 
   #skillsContainer {
@@ -664,6 +670,7 @@ footer {
   #projects {
       width: 100%;
       padding: 10px;
+      margin-top: 0;
   }
 
   .project {

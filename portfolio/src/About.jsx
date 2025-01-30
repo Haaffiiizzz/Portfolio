@@ -236,10 +236,7 @@ function About() {
 
     return (
         <div id="about">
-
-            {/* <h1 id="sectionHeader">About</h1> */}
-            
-            
+          
                 <div id="aboutSection" ref={aboutRef}>
                     <img src={hero} alt="hero" />
                     <p>I am an Applied Computer Science student at the University of Winnipeg. I love solving problems and 

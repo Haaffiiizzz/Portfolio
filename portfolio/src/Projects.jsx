@@ -52,7 +52,16 @@ const Projects = () => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
+                        if (window.innerWidth > 730){
+                            if (entry.target.getAttribute("align") === "left") {
+                                entry.target.classList.add("moveRight");
+                            } else {
+                                entry.target.classList.add("moveLeft");
+                            }
+                        } else {
                             entry.target.classList.add("appear");
+                        }
+                        
                         
                     }
                 });

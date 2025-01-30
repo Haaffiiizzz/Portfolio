@@ -9,9 +9,9 @@ function App() {
     <>
       <Welcome/>
       <Nav/>
-    
+      <h1 id="sectionHeader">About</h1>
       <About/>
-       
+       <h1 id="sectionHeader">Projects</h1> 
       <Projects/>
       
       <Footer/>
