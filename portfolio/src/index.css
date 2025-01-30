@@ -274,6 +274,7 @@ nav a:hover {
   box-sizing: border-box;
   margin-bottom: 35vh;
   height: 120vh;
+  
 }
 
 #sectionHeader {
@@ -423,6 +424,7 @@ nav a:hover {
   animation: revolveAntiClockWise 30s linear infinite;
   animation-timing-function: linear;
   transition: 3s;
+
 }
 
 #skillCard {
@@ -439,6 +441,7 @@ nav a:hover {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #d1f5e0;
+  z-index: 10000000000000000000000;
 }
 
 .appearSkillCard {
@@ -591,37 +594,44 @@ footer {
   }
 
   #about {
-      padding: 5%;
-      display: flex;
       flex-direction: column;
-      gap: 30px;
       height: 130vh;
       scroll-margin-top: 10vh;
       margin-bottom: 0;
       align-items: center;
-      justify-items: center;
+      padding-right: 0;
   }
 
   #aboutSection {
-    width: 80%; 
-    margin: 0 auto 10vh auto;
+    position: relative;
+    width: 100%; 
+    margin-top: 0;
+    margin-bottom: 15vh;
+    margin-right: 0;
+    margin-left: 0;
     height: auto;
     font-weight: 500;
     font-size: 80%;
     line-height: 1.2;
+    left: 15%;
   }
 
   #aboutSection img{
     height: 50%;
     width: 100%;
     margin-bottom: 5%;
+    align-self: center;
+  }
+
+  #aboutSection p {
+    width: 50%;
+    min-width: 250px;
   }
 
   #skillsContainer {
     margin: 0 auto;
-    width: 85%;
     height: auto;
-    margin-right: 50%;
+    margin-right: 55%;
   }
 
   #centerIcon {
