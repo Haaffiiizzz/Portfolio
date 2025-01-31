@@ -237,7 +237,7 @@ function About() {
     return (
         <div id="about">
           
-                <div id="aboutSection" ref={aboutRef}>
+                <div className="aboutSection" ref={aboutRef}>
                     <img src={hero} alt="hero" />
                     <p>I am an Applied Computer Science student at the University of Winnipeg. I love solving problems and 
                     picking my brain. Whether taking on new projects or
