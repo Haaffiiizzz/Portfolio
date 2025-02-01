@@ -295,7 +295,7 @@ nav a:hover {
   font-size: 100%; 
   line-height: 1.5;
   text-align: left;
-  width: 40%;
+  width: 50%;
   height: 50%;
   margin: auto auto;
   margin-top: 10%;
@@ -317,6 +317,7 @@ nav a:hover {
 }
 
 .aboutSection p {
+  width: 100%;
   max-width: 350px;
 }
 
