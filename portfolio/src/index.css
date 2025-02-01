@@ -79,7 +79,7 @@ nav a {
   transition: transform 0.5s ease;
   font-weight: 500;
   font-family: "Titillium Web";
-  font-size: 90%;
+  font-size: 100%;
 
   
 }
@@ -708,6 +708,22 @@ footer {
   #about { 
     padding-left: 10vw;
     margin-bottom: 0;
+  }
+
+  .aboutSection {
+    font-size: 120%;
+    line-height: 1.5;
+    max-width: 500px;
+  }
+
+  .aboutSection img {
+    height: 85%;
+    max-width: 300px;
+    max-height: 300px;
+  }
+  .aboutSection p {
+    width: 100%;
+    max-width: 400px;
   }
   #centerIcon {
     transform: translate(-20%, -25%);
