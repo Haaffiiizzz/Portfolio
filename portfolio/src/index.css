@@ -476,14 +476,56 @@ nav a:hover {
   }
 }
 
+#connects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 5vw;
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+  gap: -15vh;
+  margin: 0px auto;
+  scroll-margin-top: 20vh;
+  margin-bottom: 30vh;
+  text-align: center;
+  align-items: center;
+}
+
+.connect {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;  
+  margin-top: -10vh; 
+}
+
+.connect:first-child {
+  margin-top: 0;
+}
+
+.connect img {
+  width: 65%;
+  height: 60vh;
+}
+
+.connect[align="left"] {
+  margin-right: 40%;
+  margin-left: 10%;
+}
+
+.connect[align="right"] {
+  margin-left: 40%;
+  margin-right: 10%;
+}
+
 #projects {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
   width: 100%;
   text-align: center;
   flex-direction: column;
@@ -597,9 +639,9 @@ footer {
 
   #about {
       flex-direction: column;
-      height: 150vh;
+      height: 140vh;
       scroll-margin-top: 10vh;
-      margin-bottom:  5vh;
+      /* margin-bottom:  5vh; */
       align-items: center;
       padding-right: 0;
   }

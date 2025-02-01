@@ -3,6 +3,7 @@ import Footer from "./Footer.jsx"
 import About from "./About.jsx"
 import Welcome from "./Welcome.jsx"
 import Projects from "./Projects.jsx"
+import Connect from "./Connect.jsx"
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <About/>
        <h1 id="sectionHeader">Projects</h1> 
       <Projects/>
+      <h1 id="sectionHeader">Connect</h1>
+      <Connect/>
       
       <Footer/>
    

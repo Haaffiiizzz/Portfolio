@@ -15,7 +15,7 @@ function Nav(){
                     </li>
 
                     <li>
-                        <a href="#">Reach Out</a>
+                        <a href="connects">Connect</a>
                     </li>
                 </ul>
             </nav>
