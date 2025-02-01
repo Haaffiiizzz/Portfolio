@@ -15,7 +15,7 @@ function Nav(){
                     </li>
 
                     <li>
-                        <a href="connects">Connect</a>
+                        <a href="#connects">Connect</a>
                     </li>
                 </ul>
             </nav>
