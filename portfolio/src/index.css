@@ -101,7 +101,7 @@ nav a:hover {
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-size: 5vw;
+  font-size: 4vw;
   font-family: 'DIN Neuzeit Grotesk';
   color: #fff;
   padding: 10px 10px 10px 10px;
@@ -117,7 +117,7 @@ nav a:hover {
   border-radius: 5px;
   text-decoration: none;
   border: 5px solid #377;
-  font-size: 7vw;
+  font-size: 3vw;
   transition: transform 0.5s ease, box-shadow 0.5s ease,  background-color 2s ease;
 }
 
@@ -269,11 +269,10 @@ nav a:hover {
   text-align: center;
   flex-direction: row;
   overflow: hidden;
-  padding: 0% 20% 0% 0%;
+  padding: 0% 20% 0% 7%;
   box-sizing: border-box;
-  margin-bottom: 35vh;
+  /* margin-bottom: 35vh; */
   height: 120vh;
-  
 }
 
 #sectionHeader {
@@ -302,10 +301,11 @@ nav a:hover {
   content: '';
   position: absolute;
   left: 50px;
-  bottom: 1.5vh;
+  bottom: 1vw;
   width: 85%;
-  height: 5vh;
-  background: #122;
+  height: 3vw;
+  max-height: 30px;
+  background: #0d332a;
   z-index: -1;
   
 }
@@ -315,10 +315,9 @@ nav a:hover {
   padding: 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 130%; 
   line-height: 1.5;
   text-align: left;
-  width: 50%;
+  width: 40%;
   height: 50%;
   margin: auto auto;
   margin-top: 10%;
@@ -333,15 +332,14 @@ nav a:hover {
 }
 
 .aboutSection img {
-  height: 90%;
-  width: 120%;
-  max-width: 250px;
+  height: 80%;
+  width: 100%;
   display: block;
 }
 
 .aboutSection p {
   width: 100%;
-  max-width: 400px;
+  font-size: 120%;
 }
 
 @keyframes gradient {
@@ -463,6 +461,7 @@ nav a:hover {
   font-weight: 500;
   color: #d1f5e0;
   z-index: 10000000000000000000000;
+  overflow: visible;
 }
 
 .appearSkillCard {
@@ -608,13 +607,19 @@ nav a:hover {
 .project a {
   text-decoration: none;
   color: inherit; 
-  width: 80%;
   background-color: #266;
   padding: 3px 5px;
   margin: 10px;
-  font: 'DIN Neuzeit Grotesk';
+  font-family: 'DIN Neuzeit Grotesk';
   border-radius: 5px;
   font-size: 90%;
+  transition: transform 1s ease;
+  display: inline-block;
+}
+
+.project a:hover {
+  background-color: #377;
+  transform: scale(1.1);
 }
 
 
@@ -668,15 +673,21 @@ footer {
   nav ul {
     width: 100%;
   }
+
+  #sectionHeader h1{
+    font-size: 150%;
+  }
+
   #sectionHeader h1::after {
     content: '';
     position: absolute;
     left: 5vw;
-    bottom: 0vh;
+    bottom: 1vh;
     width: 85%;
-    height: 3vh;
+    height: 1vh;
     background: #122;
     z-index: -1;
+    max-height: 20px;
     
   }
 
@@ -805,7 +816,7 @@ footer {
 
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1600px) {
   #welcome {
     font-size: 40px;
     font-size: 400%;
@@ -821,10 +832,18 @@ footer {
     font-size: 50%;
   }
 
-  #sectionHeader {
-    font-size: 50px;
+  #sectionHeader h1{
+    font-size: 350%;
   }
 
+  #sectionHeader h1::after {
+    bottom: 0.7vw;
+    height: 3vw;
+  }
+
+  nav {
+    height: 5vh;
+  }
   #about { 
     padding-left: 10vw;
     margin-bottom: 0;

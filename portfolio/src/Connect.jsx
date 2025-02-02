@@ -1,5 +1,6 @@
 import { ReactComponent as LinkedIn } from "./assets/images/LinkedIn.svg";
 import { ReactComponent as GitHub } from "./assets/images/GitHub.svg";
+import { ReactComponent as LeetCode } from "./assets/images/LeetCode.svg";
 import { useEffect, useRef } from "react";
 
 const Connect = () => {
@@ -22,18 +23,12 @@ const Connect = () => {
         },
         {
             id: 3,
-            platform: "LinkedIn",
-            link: "https://www.linkedin.com/in/haaffiiizzz",
+            platform: "LeeetCode",
+            link: "https://www.leetcode.com/u/haaffiiizzz",
             align: "left",
-            icon: <LinkedIn />
+            icon: <LeetCode />
         },
-        {
-            id: 4,
-            platform: "GitHub",
-            link: "https://www.github.com/haaffiiizzz",
-            align: "right",
-            icon: <GitHub />
-        }
+        
     ];
 
     useEffect(() => {
@@ -72,7 +67,7 @@ const Connect = () => {
                     align={connect.align}
                     ref={(el) => (connectRefs.current[index] = el)}
                 >
-                    <a href={connect.link} target="_blank" rel="noreferrer">
+                    <a href={connect.link} title={connect.platform} target="_blank" rel="noreferrer">
                         {connect.icon}
                     </a>
                 </div>
