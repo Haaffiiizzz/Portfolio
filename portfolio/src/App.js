@@ -10,11 +10,14 @@ function App() {
     <>
       <Welcome/>
       <Nav/>
-      <h1 id="sectionHeader">About</h1>
+
+      <div id="sectionHeader"><h1>About</h1></div>
       <About/>
-       <h1 id="sectionHeader">Projects</h1> 
+
+      <div id="sectionHeader"><h1>Projects</h1></div>
       <Projects/>
-      <h1 id="sectionHeader">Connect</h1>
+      
+      <div id="sectionHeader"><h1>Connect</h1></div>
       <Connect/>
       
       <Footer/>

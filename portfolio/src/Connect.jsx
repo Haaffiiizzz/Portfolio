@@ -1,4 +1,5 @@
-import LinkedIn from "./assets/images/LinkedIn.png";
+import { ReactComponent as LinkedIn } from "./assets/images/LinkedIn.svg";
+import { ReactComponent as GitHub } from "./assets/images/GitHub.svg";
 import { useEffect, useRef } from "react";
 
 const Connect = () => {
@@ -10,28 +11,28 @@ const Connect = () => {
             platform: "LinkedIn",
             link: "https://www.linkedin.com/in/haaffiiizzz",
             align: "left",
-            image: LinkedIn
+            icon: <LinkedIn />
         },
         {
             id: 2,
-            platform: "LinkedIn",
-            link: "https://www.linkedin.com/in/haaffiiizzz",
+            platform: "GitHub",
+            link: "https://www.github.com/haaffiiizzz",
             align: "right",
-            image: LinkedIn
+            icon: <GitHub />
         },
         {
             id: 3,
             platform: "LinkedIn",
             link: "https://www.linkedin.com/in/haaffiiizzz",
             align: "left",
-            image: LinkedIn
+            icon: <LinkedIn />
         },
         {
             id: 4,
-            platform: "LinkedIn",
-            link: "https://www.linkedin.com/in/haaffiiizzz",
+            platform: "GitHub",
+            link: "https://www.github.com/haaffiiizzz",
             align: "right",
-            image: LinkedIn
+            icon: <GitHub />
         }
     ];
 
@@ -72,8 +73,7 @@ const Connect = () => {
                     ref={(el) => (connectRefs.current[index] = el)}
                 >
                     <a href={connect.link} target="_blank" rel="noreferrer">
-                        <img src={connect.image} alt={connect.platform} />
-                        <p>{connect.platform}</p>
+                        {connect.icon}
                     </a>
                 </div>
             ))}
