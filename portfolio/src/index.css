@@ -485,29 +485,41 @@ nav a:hover {
   width: 100%;
   text-align: center;
   flex-direction: column;
-  gap: -15vh;
+  gap: 15vh;
   margin: 0px auto;
   scroll-margin-top: 20vh;
-  margin-bottom: 30vh;
   text-align: center;
   align-items: center;
 }
 
 .connect {
-  width: 40%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   text-align: center;  
-  margin-top: -10vh; 
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 1s ease, box-shadow 1s ease;
+  padding: 5vh;
+  border-radius: 10px;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: transform 3s, opacity 3s;
+  opacity: 0;
 }
 
+.connect:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 1s ease, box-shadow 1s ease;
+}
 .connect:first-child {
   margin-top: 0;
 }
 
 .connect img {
-  width: 65%;
-  height: 60vh;
+  width: 80%;
+  height: 50vh;
 }
 
 .connect[align="left"] {
@@ -720,6 +732,40 @@ footer {
     margin-left: 0;
     margin-right: 0;
   }
+
+  #connects {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    scroll-margin-top: 20vh;
+  }
+  
+  .connect {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;  
+    margin-top: 0;
+    margin-bottom: 10vh;
+  }
+  
+
+  .connect img {
+    width: 70%;
+    height: 50vh;
+  }
+  
+  .connect[align="left"] {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .connect[align="right"] {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
 
   footer {
       padding: 10px;
