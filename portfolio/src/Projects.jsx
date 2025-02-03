@@ -1,4 +1,6 @@
 import PortfolioImage from "./assets/images/PortfolioImage.png"
+import JobAPP from "./assets/images/JobAPP.svg"
+import ItemsAPI from "./assets/images/ItemsAPI.png"
 import { useEffect, useRef } from "react";
 
 const Projects = () => {
@@ -8,7 +10,7 @@ const Projects = () => {
         {
             id: 1,
             title: "Portfolio Website",
-            description: "A personal portfolio showcasing my projects and skills.",
+            description: "My personal portfolio showcasing my projects and skills using React.js",
             repo: "https://www.github.com/haaffiiizzz/portfolio",
             live: "#",
             align: "left",
@@ -28,15 +30,25 @@ const Projects = () => {
         {
             id: 3,
             title: "Job Tracker",
-            description: "An app that tracks job applications and interview progress.",
+            description: "Working on a webapp that tracks job applications and interview progress using Gmail and Gemini APIs.",
             repo: "https://www.github.com/haaffiiizzz/JobApp_Tracker",
             live: "#",
             align: "left",
-            image: PortfolioImage,
+            image: JobAPP,
             skills: ["python", "git", "fastapi", "github"]
         },
         {
             id: 4,
+            title: "ItemsAPI",
+            description: "A FastAPI based RESTful API containing item prices from different countries",
+            repo: "#",
+            live: "#",
+            align: "right",
+            image: ItemsAPI,
+            skills: ["fastapi", "python", "postgresql", "supabase", "github"]
+        },
+        {
+            id: 5,
             title: "Muktashif",
             description: "A deep-learning model that can recognize verses of Quranic recitation from audio",
             repo: "#",

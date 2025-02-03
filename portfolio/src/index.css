@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(45deg, #081018, #131111, #081a14, #071820);
-	background-size: 400% 400%;
+	background-size: 500% 500%;
 	animation: gradient 5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
 }
 
@@ -271,7 +271,6 @@ nav a:hover {
   overflow: hidden;
   padding: 0% 20% 0% 7%;
   box-sizing: border-box;
-  /* margin-bottom: 35vh; */
   height: 120vh;
 }
 
@@ -515,11 +514,11 @@ nav a:hover {
 }
 
 .connect {
+  background-color: inherit;
   width: 30%;
-  display: flex;
   flex-direction: column;
   text-align: center;  
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2vh 2vw rgba(0, 0, 0, 0.15);
   padding: 5vh;
   border-radius: 10px;
   animation-duration: 3s;
@@ -527,11 +526,12 @@ nav a:hover {
   animation-fill-mode: forwards;
   transition: transform 3s ease, opacity 3s, box-shadow 1s ease;
   opacity: 0;
+  display: block;
 }
 
 .connect:hover {
-  transform: scale(1.1);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+  transform: scale(1.2);
+  box-shadow: 0 3vh 3vw rgba(0, 0, 0, 0.4);
   transition: transform 1s ease, box-shadow 1s ease;
 }
 .connect:first-child {
@@ -585,7 +585,6 @@ nav a:hover {
   animation-fill-mode: forwards;
   transition: transform 3s, opacity 3s;
   opacity: 0;
-  height: fit;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -600,8 +599,11 @@ nav a:hover {
 }
 
 .project img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 50vw;
   border-radius: 10px;
+  max-height: 90vh;
+  
 }
 
 .project a {
@@ -675,7 +677,7 @@ footer {
   }
 
   #sectionHeader h1{
-    font-size: 150%;
+    font-size: 190%;
   }
 
   #sectionHeader h1::after {
@@ -684,7 +686,7 @@ footer {
     left: 5vw;
     bottom: 1vh;
     width: 85%;
-    height: 1vh;
+    height: 2vh;
     background: #122;
     z-index: -1;
     max-height: 20px;
@@ -698,6 +700,7 @@ footer {
       margin-bottom:  0vh;
       align-items: center;
       padding-right: 0;
+      padding: 0% 0% 0% 0%;
   }
 
   .aboutSection {
@@ -728,7 +731,7 @@ footer {
   #skillsContainer {
     margin: 0 auto;
     height: auto;
-    margin-right: 55%;
+    margin-right: 58%;
     margin-top: 5vh;
   }
 
@@ -761,7 +764,6 @@ footer {
 
   #projects {
       width: 100%;
-      padding: 10px;
       margin-top: 0;
       margin-bottom: 0;
   }
@@ -775,6 +777,11 @@ footer {
     margin-right: 0;
   }
 
+  .project img {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+
   #connects {
     display: flex;
     flex-direction: column;
@@ -783,7 +790,7 @@ footer {
   }
   
   .connect {
-    width: 100%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     text-align: center;  
