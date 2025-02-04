@@ -695,7 +695,7 @@ footer {
 
   #about {
       flex-direction: column;
-      height: 140vh;
+      height: 130vh;
       scroll-margin-top: 10vh;
       margin-bottom:  0vh;
       align-items: center;

@@ -1,5 +1,5 @@
 import PortfolioImage from "./assets/images/PortfolioImage.png"
-import JobAPP from "./assets/images/JobAPP.svg"
+import JobApp from "./assets/images/JobApp.png"
 import ItemsAPI from "./assets/images/ItemsAPI.png"
 import { useEffect, useRef } from "react";
 
@@ -34,15 +34,15 @@ const Projects = () => {
             repo: "https://www.github.com/haaffiiizzz/JobApp_Tracker",
             live: "#",
             align: "left",
-            image: JobAPP,
+            image: JobApp,
             skills: ["python", "git", "fastapi", "github"]
         },
         {
             id: 4,
             title: "ItemsAPI",
             description: "A FastAPI based RESTful API containing item prices from different countries",
-            repo: "#",
-            live: "#",
+            repo: "https://github.com/Haaffiiizzz/ItemsAPI",
+            live: "https://itemsapi.abdulhafizdada.com/docs#/",
             align: "right",
             image: ItemsAPI,
             skills: ["fastapi", "python", "postgresql", "supabase", "github"]
@@ -97,11 +97,11 @@ const Projects = () => {
                     align={project.align}
                     ref={(el) => (projectRefs.current[index] = el)}
                 >
-                    <img src={project.image} alt={`${project.title} Image`} />
+                    <img src={project.image} alt={`${project.title}`} />
                     <h2>{project.title}</h2>
                     <p>{project.description}</p>
-                    <a href={project.repo}>Repo</a>
-                    <a href={project.live}>Live</a>
+                    <a href={project.repo} target="_blank" rel="noreferrer">Repo</a>
+                    <a href={project.live} target="_blank" rel="noreferrer">Live</a>
                     <div id="projectSkill">
                         {project.skills.map((skill) => (
                             <img
