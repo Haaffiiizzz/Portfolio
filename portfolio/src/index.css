@@ -507,6 +507,7 @@ nav a:hover {
   animation-fill-mode: forwards;
   transition: transform 3s ease, opacity 3s, box-shadow 1s ease;
   opacity: 0;
+  transform: scale(1);
   display: block;
 }
 

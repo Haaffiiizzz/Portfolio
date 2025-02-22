@@ -1,7 +1,7 @@
 
 
 function Welcome() {
-    const resumeLink = "https://docs.google.com/document/d/1iT8PucOE4N3lGe7YkbRKnghtVT6V4CFiIz6xUIlcBdc/edit?usp=sharing"
+    const resumeLink = "https://drive.google.com/file/d/1mgywsgf7zhNsdKCrdXhWa_bc6RAQWAzq/view?usp=sharing"
     return (
         
         <div id="welcome">
@@ -10,7 +10,7 @@ function Welcome() {
             <div><a href="#about" className="appear">Learn More About Me</a></div>
             <div id="smallWelcomeLink">
                 <a href={resumeLink} target="_blank" className="appearLate">View My Resume</a>
-                <a href="#" className="appearLate">Contact Me</a>
+                <a href="#connects" className="appearLate">Contact Me</a>
             </div>
 
         </div>
