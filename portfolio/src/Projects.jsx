@@ -1,6 +1,8 @@
 import PortfolioImage from "./assets/images/PortfolioImage.png"
 import JobApp from "./assets/images/JobApp.png"
 import ItemsAPI from "./assets/images/ItemsAPI.png"
+import OpenAI from "./assets/images/OpenAI.svg"
+import DealWatch from "./assets/images/DealWatch.png"
 import { useEffect, useRef } from "react";
 
 const Projects = () => {
@@ -19,13 +21,13 @@ const Projects = () => {
         },
         {
             id: 2,
-            title: "Tadhkir Prayer App",
-            description: "A prayer tracking app for reminders and accountability.",
-            repo: "https://www.github.com/haaffiiizzz/tadhkir",
-            live: "#",
+            title: "DealWatch",
+            description: "A web app that lets users easily find products from different e-commerce platforms and get recommendations on the best deals.",
+            repo: "https://www.github.com/haaffiiizzz/dealwatch",
+            live: "http://dealwatch.abdulhafizdada.com/docs",
             align: "right",
-            image: PortfolioImage,
-            skills: ["react", "nodejs", "github"]
+            image: DealWatch,
+            skills: ["python", "selenium", "openai", "fastapi", "react", "heroku", "git"]
         },
         {
             id: 3,
@@ -46,16 +48,6 @@ const Projects = () => {
             align: "right",
             image: ItemsAPI,
             skills: ["fastapi", "python", "postgresql", "supabase", "github"]
-        },
-        {
-            id: 5,
-            title: "Muktashif",
-            description: "A deep-learning model that can recognize verses of Quranic recitation from audio",
-            repo: "#",
-            live: "#",
-            align: "right",
-            image: PortfolioImage,
-            skills: ["fastapi", "python", "tensorflow", "pytorch", "github"]
         }
     ];
 
@@ -106,7 +98,10 @@ const Projects = () => {
                         {project.skills.map((skill) => (
                             <img
                                 key={skill}
-                                src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${skill}/${skill}-original.svg`}
+                                src={skill === "openai"
+                                    ? OpenAI
+                                    : `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${skill}/${skill}-original.svg`
+                            }
                                 alt={skill}
                             />
                         ))}

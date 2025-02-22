@@ -32,25 +32,6 @@ html {
   src: url('./assets/fonts/DINNeuzeitGroteskStdBdCond.otf') format('opentype');
 }
 
-@font-face {
-  font-family: 'Cement';
-  src: url(./assets/fonts/Cement.otf);
-}
-
-@font-face {
-  font-family: 'Ankh';
-  src: url(./assets/fonts/Ankh.ttf);
-}
-
-@font-face {
-  font-family: 'LemonJelly';
-  src: url(./assets/fonts/LemonJelly.ttf);
-}
-
-@font-face {
-  font-family: "VeganStyle";
-  src: url(./assets/fonts/VeganStyle.ttf);
-} 
 
 nav {
   background-color: #122;
@@ -304,7 +285,7 @@ nav a:hover {
   width: 85%;
   height: 3vw;
   max-height: 30px;
-  background: #0d332a;
+  background: #04614b;
   z-index: -1;
   
 }
@@ -649,10 +630,23 @@ footer {
   text-align: center;
   background-color: #266;
   color: #fff;
-  padding: 20px;
+  padding: 10px;
   width: 100vw;
-  margin-top: 20px;
+  margin-top: 0px;
 }
+
+.footer-top {
+  margin-top: -5vh;
+  cursor: pointer;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
 
 @media (max-width: 730px){
 

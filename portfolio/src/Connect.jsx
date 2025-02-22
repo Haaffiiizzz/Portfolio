@@ -1,6 +1,7 @@
 import { ReactComponent as LinkedIn } from "./assets/images/LinkedIn.svg";
 import { ReactComponent as GitHub } from "./assets/images/GitHub.svg";
 import { ReactComponent as LeetCode } from "./assets/images/LeetCode.svg";
+import { ReactComponent as Gmail } from "./assets/images/Gmail.svg";
 import { useEffect, useRef } from "react";
 
 const Connect = () => {
@@ -28,7 +29,13 @@ const Connect = () => {
             align: "left",
             icon: <LeetCode />
         },
-        
+        {
+            id: 4,
+            platform: "Gmail",
+            link: "mailto:dadaabdulhafiz0306@gmail.com?subject=Let's Collaborate: Inquiry from Hafiz's Portfolio",
+            align: "right",
+            icon: <Gmail />
+        }
     ];
 
     useEffect(() => {
