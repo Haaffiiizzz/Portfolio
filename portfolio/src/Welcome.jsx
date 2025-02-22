@@ -1,7 +1,7 @@
 
 
 function Welcome() {
-    const resumeLink = "https://drive.google.com/file/d/1mgywsgf7zhNsdKCrdXhWa_bc6RAQWAzq/view?usp=sharing"
+    const resumeLink = "https://drive.google.com/file/d/1gkGE-2gH2tBx3F2YxZ1_zxJS3k0lJi98/view?usp=sharing"
     return (
         
         <div id="welcome">
