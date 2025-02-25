@@ -241,7 +241,7 @@ function About() {
                     <img src={hero} alt="hero" />
                     <p>I am an Applied Computer Science student at the University of Winnipeg. I love solving problems and 
                     picking my brain. Whether taking on new projects or
-                    solving DSA problems on LeetCode, I love to challenge myself. My current focus is in iOS development and Machine Learning.
+                    solving DSA problems on LeetCode, I love to challenge myself. My current focus is in Mobile App development and Machine Learning.
                     For fun, I love to play Call of Duty and watch
                     crime or mystery shows.</p>
                 </div>
